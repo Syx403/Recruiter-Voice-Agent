@@ -1,5 +1,5 @@
 [project]
-name = "ae-voice-screener"
+name = "recruiter-voice-agent"
 version = "0.0.1"
 description = "A voice agent that runs first-round screens for Account Executive roles"
 requires-python = ">=3.12"

@@ -1,6 +1,6 @@
 """Server-side secret storage.
 
-Secrets live in the macOS Keychain (service "ae-voice-screener"), or in environment
+Secrets live in the macOS Keychain (service "recruiter-voice-agent"), or in environment
 variables, which take precedence. Values are never printed or logged.
 
 Usage:
@@ -16,7 +16,7 @@ import sys
 
 import keyring
 
-SERVICE = "ae-voice-screener"
+SERVICE = "recruiter-voice-agent"
 KNOWN = ("OPENAI_API_KEY", "GEMINI_API_KEY", "AZURE_SPEECH_KEY", "ANTHROPIC_API_KEY")
 
 
@@ -37,8 +37,8 @@ def store_secret(name: str, value: str) -> None:
 
 def _prompt_hidden(name: str) -> str | None:
     script = (
-        f'display dialog "Paste {name} for AE Voice Screener" '
-        'default answer "" with hidden answer with title "AE Voice Screener" '
+        f'display dialog "Paste {name} for Recruiter Voice Agent" '
+        'default answer "" with hidden answer with title "Recruiter Voice Agent" '
         'buttons {"Cancel", "Save"} default button "Save"\n'
         "text returned of result"
     )

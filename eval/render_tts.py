@@ -23,7 +23,7 @@ def render(text: str, voice: str) -> bytes:
     ssml = f"<speak version='1.0' xml:lang='{lang}'><voice name='{voice}'>{escape(text)}</voice></speak>"
     r = httpx.post(URL, content=ssml.encode(), timeout=60, headers={
         "Ocp-Apim-Subscription-Key": get_secret("AZURE_SPEECH_KEY"), "Content-Type": "application/ssml+xml",
-        "X-Microsoft-OutputFormat": "raw-24khz-16bit-mono-pcm", "User-Agent": "ae-voice-screener"})
+        "X-Microsoft-OutputFormat": "raw-24khz-16bit-mono-pcm", "User-Agent": "recruiter-voice-agent"})
     r.raise_for_status()
     CACHE.mkdir(parents=True, exist_ok=True)
     path.write_bytes(r.content)

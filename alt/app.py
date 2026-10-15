@@ -34,7 +34,7 @@ from backend.orchestrator import load_config  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "alt" / "frontend" / "dist"
 
-app = FastAPI(title="AE Voice Screener")
+app = FastAPI(title="Recruiter Voice Agent")
 content = ContentStore()
 
 
