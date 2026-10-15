@@ -1,9 +1,17 @@
-# AE Voice Screener
+# Recruiter Voice Agent
 
-A voice agent that runs the first-round screen for Account Executive (AE) roles at tech and AI companies in Asia.
-A recruiter picks a job and a candidate; the agent prepares questions from the job description and the CV,
-holds a 10–15 minute voice interview in the browser, checks the candidate's numbers, and writes a scored brief
-for the hiring manager. The recruiter approves each step.
+A voice agent for first-round recruiter screens. A recruiter imports a job description and a CV; the agent
+prepares questions for that job and that candidate, holds a 10–15 minute voice interview in the browser, checks
+what the candidate claims, and writes a scored, evidence-backed brief for the hiring manager. The recruiter
+approves each step.
+
+**Today** it supports Account Executive (AE) roles at tech and AI companies in Asia: the interview stages, rubric
+and domain checks (quota, attainment, deal size, sales motion) are written for AE hiring, with market presets for
+India and Singapore. Any AE job description that follows [the input format](docs/INPUT_SPEC.md) already gets its
+own screen configuration.
+
+**Where it is going:** one-click import for other roles. Each job family needs its own interview layer (stages,
+rubric, checks), and raw job descriptions and CVs need an extractor in front; neither exists yet.
 
 It is a working prototype. All candidates are synthetic; the two job descriptions come from public postings.
 
