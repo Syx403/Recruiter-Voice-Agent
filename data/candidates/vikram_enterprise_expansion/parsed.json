@@ -1,0 +1,152 @@
+{
+  "candidate_id": "vikram_enterprise_expansion",
+  "name": "Vikram Bose",
+  "headline": "Enterprise Account Executive | Data infrastructure | Expansion | Bengaluru",
+  "location": "Bengaluru, Karnataka, India",
+  "current": {
+    "title": "Enterprise Account Executive",
+    "company": "Streamwell Data",
+    "company_type": "enterprise_data_infrastructure",
+    "start": "2021-04"
+  },
+  "history": [
+    {
+      "title": "Senior Account Manager",
+      "company": "Opencore Systems",
+      "company_type": "enterprise_software",
+      "start": "2018-06",
+      "end": "2021-03",
+      "motion": "expansion",
+      "segment": "enterprise",
+      "territory": "India",
+      "products": ["enterprise subscriptions"],
+      "buyers": ["existing installed-base stakeholders"],
+      "highlights": ["Expansion of existing subscriptions"]
+    },
+    {
+      "title": "Account Manager",
+      "company": "Opencore Systems",
+      "company_type": "enterprise_software",
+      "start": "2016-07",
+      "end": "2018-05",
+      "motion": "expansion",
+      "segment": "enterprise",
+      "territory": "India",
+      "products": ["enterprise subscriptions"],
+      "buyers": ["existing accounts"],
+      "highlights": ["Enterprise account management"]
+    }
+  ],
+  "claims": [
+    {
+      "id": "cl_role",
+      "text": "Enterprise Account Executive at Streamwell Data since Apr 2021",
+      "field": "current_role",
+      "value": "Enterprise Account Executive, Streamwell Data",
+      "unit": "text",
+      "window": "2021-04_to_present"
+    },
+    {
+      "id": "cl_start",
+      "text": "In the current enterprise seat since Apr 2021",
+      "field": "time_in_seat",
+      "value": "2021-04",
+      "unit": "month",
+      "window": "current"
+    },
+    {
+      "id": "cl_product",
+      "text": "Sells a data-streaming platform to enterprise named accounts",
+      "field": "product",
+      "value": "data-streaming platform",
+      "unit": "text",
+      "window": "current"
+    },
+    {
+      "id": "cl_buyer",
+      "text": "CIO and heads of data platform, plus procurement and legal",
+      "field": "buyer",
+      "value": "CIO, head of data platform, procurement, legal",
+      "unit": "text",
+      "window": "current"
+    },
+    {
+      "id": "cl_quota_fy26",
+      "text": "₹8 crore individual ARR quota in FY2025-26",
+      "field": "quota",
+      "value": 80000000,
+      "unit": "INR",
+      "window": "FY2025-26"
+    },
+    {
+      "id": "cl_attain_fy26",
+      "text": "105% of the FY2025-26 ARR quota",
+      "field": "attainment_pct",
+      "value": 105,
+      "unit": "percent",
+      "window": "FY2025-26"
+    },
+    {
+      "id": "cl_deals_fy26",
+      "text": "7 deals closed in FY2025-26",
+      "field": "deals_closed",
+      "value": 7,
+      "unit": "count",
+      "window": "FY2025-26"
+    },
+    {
+      "id": "cl_avg_fy26",
+      "text": "Average ARR ₹1.2 crore in FY2025-26",
+      "field": "avg_deal",
+      "value": 12000000,
+      "unit": "INR_ARR",
+      "window": "FY2025-26"
+    },
+    {
+      "id": "cl_new_logo",
+      "text": "1 of 7 FY2025-26 deals was a new paying account",
+      "field": "new_logo_share",
+      "value": 14,
+      "unit": "percent",
+      "window": "FY2025-26"
+    },
+    {
+      "id": "cl_cycle",
+      "text": "Typical cycle 8 to 10 months from first meeting to signature",
+      "field": "sales_cycle_days",
+      "value": 270,
+      "unit": "days",
+      "window": "current"
+    },
+    {
+      "id": "cl_ctc",
+      "text": "Current CTC ₹95 lakh, about 60% fixed",
+      "field": "current_ctc",
+      "value": 9500000,
+      "unit": "INR_CTC",
+      "window": "current"
+    },
+    {
+      "id": "cl_notice",
+      "text": "90-day notice, resigned 16 Sep 2026, last day 14 Dec 2026",
+      "field": "notice_status",
+      "value": "serving",
+      "unit": "text",
+      "window": "current"
+    },
+    {
+      "id": "cl_location",
+      "text": "Based in Bengaluru. Open to travel. Not relocating.",
+      "field": "location_hybrid",
+      "value": "Bengaluru, travel only",
+      "unit": "text",
+      "window": "current"
+    }
+  ],
+  "languages": ["English"],
+  "education": [
+    {"degree": "Bachelor of Engineering", "institution_type": "state_university"}
+  ],
+  "notice_days": 90,
+  "stated_comp": {"ctc_inr": 9500000, "fixed_pct": 60}
+}

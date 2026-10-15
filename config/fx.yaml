@@ -1,0 +1,25 @@
+# Fixed FX table for check_quota_consistency and the normaliser.
+# Dated reference rates, rounded; screening tolerance is ±20%, so daily moves don't matter.
+as_of: 2026-10-13
+usd_per_unit:
+  USD: 1.0
+  INR: 0.0118
+  SGD: 0.77
+  AUD: 0.66
+  PHP: 0.0175
+  IDR: 0.000062
+  MYR: 0.23
+  HKD: 0.128
+  JPY: 0.0068
+  EUR: 1.08
+  GBP: 1.27
+multipliers:
+  k: 1000
+  thousand: 1000
+  M: 1000000
+  mil: 1000000
+  million: 1000000
+  lakh: 100000
+  crore: 10000000
+  B: 1000000000
+  billion: 1000000000

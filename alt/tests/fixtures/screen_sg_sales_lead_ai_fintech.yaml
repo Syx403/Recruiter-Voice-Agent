@@ -1,0 +1,151 @@
+# Draft screen configuration (role step of the question generator); awaiting recruiter approval.
+role_id: sg_sales_lead_ai_fintech
+title: Sales Lead – AI Fintech
+company: Undisclosed AI fintech (Cygnify client)
+company_context: An AI fintech company selling software and solutions to banks, financial institutions and fintechs;
+  the posting does not name the company or the product
+location: Singapore, Singapore
+city: Singapore
+work_arrangement: on-site
+arrangement_phrase: on-site in Singapore
+market_id: singapore
+country: Singapore
+currency: SGD
+buyer_personas:
+- Senior executives and business leaders at banks and fintechs
+- C-level stakeholders
+- Technical stakeholders
+products:
+- AI-driven solutions for banks, financial services and fintechs (not named in the posting)
+team_leadership: later
+fit:
+  motion: mixed
+  min_new_logo_share: 30
+  segment: enterprise
+  sales_cycle_days: null
+  sales_cycle_basis: unknown
+  territory: null
+  languages: []
+  max_notice_days: 90
+  ote: null
+  work_eligibility_asked: true
+expected_ranges: {}
+requirements:
+- id: R1
+  check: cv
+  evidence_fields: []
+  look_for: Six or more years of sales or business development experience, ideally in banking, financial services,
+    fintech, enterprise technology or IT solutions.
+  questions: []
+  years_from_cv: true
+  text: 6–10+ years of sales or business development experience, preferably in banking, financial services, fintech,
+    enterprise technology or IT solutions
+- id: R2
+  check: screen
+  evidence_fields:
+  - new_logo_share
+  - attainment_pct
+  - first_meeting_source
+  look_for: A consistent record of opening new accounts through self-sourced first meetings and meeting quota on
+    new business.
+  questions: []
+  text: A proven track record of new-business hunting and account acquisition
+- id: R3
+  check: screen
+  evidence_fields:
+  - deal_value
+  - customer_outcome
+  - segment
+  - sales_cycle_days
+  look_for: Ownership of a full enterprise cycle from first meeting to signature, selling software, SaaS, IT services
+    or fintech solutions.
+  questions: []
+  text: Experience managing the full enterprise sales cycle, selling software, SaaS, IT services or fintech solutions
+- id: R4
+  check: question
+  evidence_fields: []
+  look_for: Concrete knowledge of banking, payments or fintech buyers, their workflows, regulators and purchasing
+    constraints.
+  questions:
+  - requirement_1
+  text: Understanding of banking, payments or fintech
+- id: R5
+  check: screen
+  evidence_fields:
+  - economic_buyer
+  - main_blocker
+  - own_actions
+  look_for: Evidence of engaging C-level or senior decision-makers, navigating blockers and negotiating to close.
+  questions: []
+  text: Ability to influence C-level stakeholders, with strong negotiation, presentation and stakeholder management
+- id: R6
+  check: screen
+  evidence_fields:
+  - team_on_deal
+  look_for: Examples of owning targets and deal outcomes personally, with limited reliance on others to close.
+  questions: []
+  text: Comfortable working independently and owning targets
+- id: R7
+  check: cv
+  evidence_fields: []
+  look_for: A bachelor's degree in business, marketing, finance, technology or a related field.
+  questions: []
+  text: A bachelor's degree in business, marketing, finance, technology or a related field
+nice_to_have: []
+role_questions:
+- question: Tell me about the buyers you have sold to in banks, payments or fintech, and how their approval process
+    shaped your deals?
+  requirement_ids:
+  - R4
+  look_for: Specific buyer roles, procurement and risk review steps, regulatory constraints and how the candidate
+    adapted the sales motion to them.
+  field: requirement_1
+competency_weights:
+  deal_execution: 0.3
+  performance_credibility: 0.25
+  technical_credibility: 0.15
+  outcome_orientation: 0.2
+  ownership_learning: 0.1
+weights_rationale: The JD centres on owning the full enterprise sales cycle and winning new logos in banks and fintechs,
+  which supports deal execution and performance credibility as the top two. Technical credibility is reduced slightly
+  because the posting names no specific product and asks for domain understanding rather than deep technical depth,
+  while outcome orientation is raised because the role sells consultatively and must answer to C-level buyers on
+  business results.
+objection_scenario:
+  role_played: A Head of Payments Operations at a regional bank
+  concern: We are a regulated bank and our model risk team will not sign off on a black-box AI system. How would
+    you explain how it reaches its decisions, and who at our end would be accountable if it got something wrong?
+  probe_if_weak: Which specific controls, audit trails or documentation would you give my model risk committee before
+    we even run a pilot?
+  strong_answer: Clarifies the buyer's governance concern before answering, avoids over-promising on explainability,
+    offers to bring in the presales or product specialist for the technical detail, and proposes a concrete next
+    step such as a joint call with model risk.
+objection_rationale: Banks and fintechs selling to regulated institutions face model risk and explainability scrutiny
+  early, so this objection tests consultative handling without requiring the candidate to know the client's product.
+faq:
+- q: Where is this role based and how does it work?
+  a: The role is based in Singapore and is on-site.
+- q: What does the role sell and to whom?
+  a: The company sells AI-driven solutions to banks, financial institutions and fintechs. The posting does not name
+    the product.
+- q: process
+  a: A recruiter reviews this screen and follows up about the next steps.
+next_round_suggestions:
+- A discovery role-play with a CRO at a bank weighing a model-risk review before any pilot.
+- A deal walkthrough with the hiring manager covering how the candidate would build a new-logo pipeline in banks
+  versus fintechs.
+- A joint session with Presales or Product to test how the candidate handles a technical question about AI decisioning.
+knockouts:
+- id: no_quota_history
+  text: never carried an individual quota
+source:
+  role_md_sha: 3570bba1de12
+  source_url: https://www.cygnify.io/jobs/sales-lead-ai-fintech-c80976f8
+  compiled_at: 1792002384.95186
+  model: claude-haiku-5-5
+validation_issues:
+- 'requirement R3: unknown fields [''deal_open''] dropped'
+- 'requirement R6: unknown fields [''deal_loss''] dropped'
+- 'role question 1: serves only requirements the cards already cover'
+- 'faq ''What happens after this screen?'': the answer is not grounded in role.md'
+- 'faq ''Will this role involve managing a team?'': the answer is not grounded in role.md'

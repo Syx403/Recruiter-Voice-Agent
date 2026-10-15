@@ -1,0 +1,138 @@
+# Spoken script. Synthetic. Indian English. Do not volunteer the TCV explanation before perf_clarify.
+candidate_id: arjun_inflated_attainment
+answers:
+  consent_ack:
+    answer: "Yes, that's fine. I have about fifteen minutes."
+    probes: {}
+    more: []
+
+  bg_current:
+    answer: "I'm an Account Executive at Northline Observability in Gurugram. We sell a cloud observability platform, logs, metrics and traces, and the person who signs is usually the VP of Engineering or the Head of Engineering."
+    probes:
+      current_role: "Account Executive at a mid-size SaaS company."
+      product: "Cloud observability. Logs, metrics and traces in one product."
+      buyer: "VP of Engineering or Head of Engineering. They sign."
+    more: []
+
+  bg_motivation:
+    answer: "I've been in this AE seat since June 2023, so a bit over three years. I'm taking the call because I want a larger product and a proper new-logo number."
+    probes:
+      time_in_seat: "Yes. FY26, April to March, was a full quota year. Not a ramp."
+      motivation: "A hunter quota on a product engineering leaders already know. The package has to move as well, but the motion is the reason I'm on this call."
+    more: []
+
+  deal_open:
+    answer: "A normal one was a logistics-tech company in Noida, about three hundred people. An SDR booked the first meeting with a senior backend engineer, and I ran it after that. The Head of Engineering was the champion. The VP of Engineering could say no, and he signed. Security did not want logs outside India. I set the agenda and got our solutions engineer on a call with their security lead. I did not write the control list myself."
+    probes:
+      first_meeting_source: "An SDR booked it. I took the meeting from the second conversation."
+      economic_buyer: "The VP of Engineering. At this size he could kill it. There was no separate CFO."
+      stakeholders: "Four. The backend engineer, the Head of Engineering, the VP of Engineering, and a security lead."
+      main_blocker: "Security. They did not want the logs processed outside India."
+      own_actions: "I ran the weekly plan and I put the SE in the room. The technical answers were his."
+      deal_value: "Twenty lakh rupees ARR for the year. The paper was three years, about sixty lakh in total."
+      cycle_length: "About a hundred days from the first meeting to signature."
+      team_on_deal: "The SDR booked the first meeting, the SE did the security call, and I drove the dates. Without me the meeting still needed an owner. The controls were not mine."
+      customer_outcome: "They said on-call felt lighter. They never gave me a number."
+    more: []
+
+  deal_loss:
+    answer: "A retail group in Delhi. I thought we had it after the technical win. We lost on price to another observability tool. I had also stayed on one engineering manager, and I brought procurement in only when legal was already slow. Next time I would book security and procurement in the first two weeks, not after the demo."
+    probes:
+      loss_review: "It was a competitor on price. The part I would change is the second week: get security and procurement in then, instead of waiting for legal."
+    more: []
+
+  perf_quota:
+    answer: "Four crore rupees for FY26, April 2025 to March 2026. It was on my name."
+    probes:
+      quota: "Four crore rupees."
+      quota_unit: "The company's quota is ARR. Annual recurring revenue."
+      quota_owner: "On my name. Not a team number."
+      quota_window: "Financial year. First of April 2025 to thirty-first of March 2026."
+      period_months: "Full twelve months. Not ramped."
+    more: []
+
+  perf_attainment:
+    answer: "A hundred and fifty percent."
+    probes:
+      attainment_pct: "One hundred and fifty percent of that four crore."
+    more: []
+
+  perf_deals:
+    answer: "Average annual contract was twenty lakh rupees, and I closed ten deals."
+    probes:
+      avg_deal: "Twenty lakh rupees. That twenty lakh is the annual contract, the ARR."
+      deals_closed: "Ten deals in that same FY26 window."
+    more: []
+
+  perf_clarify:
+    answer: "The dashboard I copied from credits total contract value. Those ten deals are three-year contracts, about sixty lakh each, six crore in total. Six crore divided by the four-crore ARR quota is the hundred and fifty percent on my CV. The twenty lakh is the ARR per deal. Ten times twenty lakh is two crore ARR, which is fifty percent of the ARR quota, not a hundred and fifty. I should not have put the contract-value percent on the CV."
+    probes:
+      quota_clarification: "The reconciled number is two crore ARR against a four-crore ARR quota. That is fifty percent. The hundred and fifty percent is six crore of TCV."
+    more: []
+
+  perf_self_sourced:
+    answer: "About forty percent of the closed deals started from a meeting I booked myself. The rest were SDR or inbound."
+    probes:
+      self_sourced_pct: "Forty percent. Meaning I booked the first meeting. Not an SDR."
+    more: []
+
+  rp_objection:
+    answer: "We keep everything in Mumbai, so the data never leaves India. Access is limited to your admins. If you ever leave, you can export all of it, so there is no lock-in."
+    probes:
+      roleplay_response: "We do have a Mumbai region. I can send a security deck that covers residency. Customers in fintech use us."
+    more: []
+
+  rp_exit:
+    answer: "I'd say I don't know, and I'd bring a solutions architect. I'd write back the same day with whoever owns that control."
+    probes:
+      unknown_detail_handling: "Say I don't know. Book the solutions architect. Confirm it in writing the same day."
+    more: []
+
+  fit_motion:
+    answer: "About sixty percent were new paying accounts. The rest were extra product in accounts we already had, not renewals."
+    probes:
+      new_logo_share: "Six of the ten. So sixty percent. New paying accounts only."
+    more: []
+
+  fit_segment:
+    answer: "Usually companies of about two hundred to fifteen hundred employees. A typical cycle is around three months, say eighty to a hundred and ten days."
+    probes:
+      segment: "A few hundred employees. Annual contracts around fifteen to thirty lakh."
+      sales_cycle_days: "About a hundred days. Call it eighty to a hundred and ten."
+    more: []
+
+  fit_territory:
+    answer: "North and West India, based in Gurugram. I sell in English, and in Hindi on some first calls."
+    probes:
+      territory: "Gurugram base. North and West India."
+      languages: "English on the sales call. Hindi when the first call goes that way."
+    more: []
+
+  fit_comp:
+    answer: "Current CTC is forty-two lakh. About seventy percent of that is fixed, thirty percent is variable at target. The variable did not pay in full last year. I'm looking for an OTE of about seventy lakh, base plus variable at plan."
+    probes:
+      current_ctc: "Forty-two lakh CTC. That is cost to company, not OTE."
+      ctc_split: "Seventy percent fixed, thirty percent variable at target."
+      ote_expectation: "About seventy lakh OTE. Base plus variable at plan. I don't have a split in mind beyond that."
+    more: []
+
+  fit_notice:
+    answer: "Sixty days. I have not resigned."
+    probes:
+      notice_period: "Sixty days in the contract."
+      notice_status: "Not serving it. I have not resigned. I don't know if they would allow a buyout."
+    more: []
+
+  fit_location:
+    answer: "I'm in Gurugram, and hybrid from Gurugram is fine."
+    probes:
+      location_hybrid: "Based in Gurugram. I can do the hybrid pattern from this office."
+    more: []
+
+  cq_open:
+    answer: "One question. Is the quota a new-logo quota, or a mix of new logo and expansion?"
+    probes:
+      candidate_question: "Is the number new logo only, or blended?"
+      candidate_done: "No, that's all from me. Thanks."
+    more:
+      - "No, that's all from me. Thanks."

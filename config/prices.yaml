@@ -1,0 +1,29 @@
+# Unit prices in USD. Per 1M tokens unless noted. Checked 2026-10-13.
+gpt-realtime-2.1-mini:
+  audio_in: 10.00
+  audio_in_cached: 0.30
+  text_in: 0.60
+  text_in_cached: 0.06
+  audio_out: 20.00
+  text_out: 2.40
+gpt-realtime-2.1:
+  audio_in: 32.00
+  audio_in_cached: 0.40
+  text_in: 4.00
+  text_in_cached: 0.40
+  audio_out: 64.00
+  text_out: 24.00
+gpt-realtime-whisper:
+  per_minute: 0.017
+gemini-3.8-live:          # free tier during development: billed 0
+  audio_in: 3.00
+  text_in: 0.75
+  audio_out: 12.00
+  text_out: 4.50
+claude-haiku-5-5:
+  text_in: 0.10
+  text_out: 0.50
+claude-sonnet-5-5:
+  text_in: 2.00
+  text_in_cached: 0.20
+  text_out: 10.00

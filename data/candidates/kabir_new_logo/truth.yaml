@@ -1,0 +1,105 @@
+# Synthetic ground truth. Not a real person.
+# Arcbridge Labs, Testwise Cloud and Helmdesk Software are real companies used only as former employers.
+# Every quota, deal and customer detail is this profile's fiction, not a company fact.
+candidate_id: kabir_new_logo
+name: Kabir Sen
+location: Gurugram
+product: API platform (current employer). Previously a developer testing platform.
+fx_assumption: "1 USD = 84 INR, for band checks only"
+
+quota:
+  window: FY2025-26
+  window_dates: [2025-04-01, 2026-03-31]
+  owner: individual
+  unit: ARR
+  amount_inr: 40000000          # ₹4.0 crore ≈ USD 476k
+  period_months: 12
+  ramped: false
+  attainment_pct: 110           # ₹4.4 crore ARR
+  arr_closed_inr: 44000000
+  deals_closed: 20
+  avg_arr_inr: 2200000          # ₹22 lakh ≈ USD 26k
+  reconcile: "20 × ₹22 lakh = ₹4.4 crore = 110% × ₹4.0 crore. Same unit. No TCV mix."
+  prior_year:
+    window: FY2024-25
+    unit: ARR
+    owner: individual
+    amount_inr: 32000000        # ₹3.2 crore
+    attainment_pct: 105
+
+motion:
+  new_logo_share_pct: 80        # 16 of 20 new paying accounts. Excludes expansion and renewals.
+  self_sourced_pct: 70          # 14 of 20. He booked the first meeting. No prior SDR conversation on those 14.
+  segment: commercial
+  employee_band: "50-800"
+  typical_acv_inr: [800000, 2500000]
+  typical_cycle_days: [45, 90]
+  territory: "India commercial, based in Gurugram, travel to Bengaluru"
+  selling_languages: [English]
+
+representative_deal:
+  kind: new_paying_account
+  customer: "Jaipur B2B SaaS company, about 200 employees. Fictional. Not a named real customer."
+  first_meeting_source: outbound
+  outbound_note: "About fourteen touches. Cold email to a staff backend engineer, who then introduced the Head of Engineering."
+  champion: Head of Engineering
+  economic_buyer: CTO
+  eb_note: "CTO could say no after the champion said yes. At ₹22 lakh ARR the CTO signed."
+  stakeholders: [staff backend engineer, Head of Engineering, CTO, security owner]
+  main_blocker: "Happy enough on Postgres-era internal tooling, plus a security questionnaire."
+  competition: "Do nothing was the real alternative. He does not invent a competitor's confidential pricing."
+  own_actions: "Wrote the mutual action plan and scheduled the solutions engineer for two calls. Did not answer the security questionnaire alone."
+  team_on_deal: [the candidate, one solutions engineer for two calls]
+  what_required_him: "The first meeting and the close plan. The SE did not own the champion."
+  deal_arr_inr: 2200000
+  deal_tcv_inr: 2200000         # one-year term. ARR = TCV.
+  cycle_days: 70
+  customer_outcome: "Champion's number: diagnosis time on three services from about two days to same day. Not his own ROI model."
+  paper_process: "Security questionnaire, then the CTO signed. No separate procurement track at this ACV."
+
+loss:
+  customer: "A Pune fintech. Fictional."
+  type: no_decision
+  detail: "Security questionnaire stalled. He stayed with the staff engineer for about three weeks."
+  owned_point: "He would ask for the security owner in week one, not week three."
+  quality: "Specific, self-owned, no-decision. Does not blame the product as the whole story."
+
+roleplay:
+  quality: strong_hygiene
+  says: "Asks which data and who signs the DPA before any region claim. Does not invent an Atlas region. Offers a solutions architect this week and a contractual schedule."
+  exit: "Same behaviour: say he does not know, write it down, bring the SE."
+  score_note: "One exchange is objection hygiene, not a full coached redo. technical_credibility is 4, not 5."
+
+comp:
+  current_ctc_inr: 6200000
+  fixed_pct: 65
+  variable_pct_of_ctc: 35
+  variable_paid_note: "Last year variable paid at plan. He does not print CTC on the CV."
+  ote_expectation_inr: 8500000
+  ote_band_used_for_fit: "Draft brief only, ₹60–90 lakh. Not spoken. Not a MongoDB band."
+  notice_days: 90
+  notice_status: not_resigned
+  buyout: unknown
+  location_hybrid: "Lives in Gurugram. Will do hybrid from Gurugram."
+
+motivation: "Wants to keep a technical buyer and a new-logo seat. Already on Gurugram hybrid. Not a family or health reason."
+
+expected:
+  competencies:
+    deal_execution: 5
+    performance_credibility: 5
+    technical_credibility: 4
+    outcome_orientation: 4
+    ownership_learning: 5
+  fit:
+    motion: pass
+    segment_and_cycle: pass
+    territory_and_languages: pass
+    ote_expectation: pass
+    notice_period: pass
+    work_authorisation: pass
+  recommendation: recommend
+  flags: []
+  unweighted_sum_out_of_25: 23
+  recommendation_basis: "Competencies 23/25 and every fit check passes. Notice is 90 days and not started: pass against the 90-day ceiling, still a start-date fact for the recruiter, not a flag."
+  employer_facts: synthetic_personal_claims_only

@@ -1,0 +1,138 @@
+# Spoken script. Synthetic. Streamwell Data and Opencore Systems numbers here are this person's fiction.
+candidate_id: vikram_enterprise_expansion
+answers:
+  consent_ack:
+    answer: "Yes, I can do the fifteen minutes. I have a hard stop after that."
+    probes: {}
+    more: []
+
+  bg_current:
+    answer: "I'm an Enterprise Account Executive at Streamwell Data, based in Bengaluru. I sell a data-streaming platform into named accounts. The economic buyer is usually the CIO. Procurement and legal sit on the path as well."
+    probes:
+      current_role: "Enterprise Account Executive. Named accounts, not a commercial patch."
+      product: "A data-streaming platform."
+      buyer: "The CIO signs. The Head of Data Platform is usually the champion. Procurement and legal come after the verbal yes."
+    more: []
+
+  bg_motivation:
+    answer: "I've been on this enterprise seat since April 2021. My notice is already running, so I'm looking. I want to see if a commercial new-logo role is actually the work I do. Most of my book has been expansion."
+    probes:
+      time_in_seat: "Since April 2021. Several full quota years."
+      motivation: "The notice forced the timing. I'm not going to pretend I've been hunting new logos."
+    more: []
+
+  deal_open:
+    answer: "I don't have a self-opened new logo in the last eighteen months that I can walk honestly. The deal I can walk is an expansion. A private-sector bank in Mumbai, already a customer. Customer success introduced me. The Head of Data Platform was the champion. The CIO could say no, and I got that meeting, which customer success had not. After the verbal yes, security, legal, and procurement still had to finish. I built the mutual close plan. About nine months. Two point four crore rupees ARR on the expansion."
+    probes:
+      first_meeting_source: "Customer success. Not my outbound."
+      economic_buyer: "The CIO. The champion had said yes. The CIO could still stop it."
+      stakeholders: "Head of Data Platform, CIO, security, legal, and procurement."
+      main_blocker: "The MSA redlines after they had already said yes."
+      own_actions: "I got the CIO meeting and I ran the close plan. I didn't negotiate the legal paper alone."
+      deal_value: "Two point four crore rupees ARR. That is annual recurring, not a multi-year total."
+      cycle_length: "About nine months. Call it two hundred and seventy days."
+      team_on_deal: "Me, a solutions architect, the customer success manager, and my manager on the CIO call. Without me they had the relationship and no signature path."
+      customer_outcome: "Their number. A nightly risk batch went from about six hours to under two."
+    more: []
+
+  deal_loss:
+    answer: "A conglomerate, the one new logo I pushed last year. I stayed with the architect. I never got the CIO. They renewed the incumbent. I would ask in week two for the CIO meeting, and I would stop spending time if the architect could not make it."
+    probes:
+      loss_review: "No decision in favour of the incumbent. The break was access. Week two is when I should have tested the champion."
+    more: []
+
+  perf_quota:
+    answer: "Eight crore rupees ARR, on my name, FY26, April 2025 to March 2026. Full year, not ramped."
+    probes:
+      quota: "Eight crore rupees."
+      quota_unit: "ARR."
+      quota_owner: "Individual. My name."
+      quota_window: "Financial year 2025-26."
+      period_months: "Twelve months."
+    more: []
+
+  perf_attainment:
+    answer: "A hundred and five percent."
+    probes:
+      attainment_pct: "One hundred and five percent of the eight crore ARR."
+    more: []
+
+  perf_deals:
+    answer: "Seven deals. Average ARR one point two crore. Same unit as the quota."
+    probes:
+      avg_deal: "One point two crore ARR. Not total contract value."
+      deals_closed: "Seven in FY26."
+    more: []
+
+  perf_clarify:
+    answer: "Seven times one point two crore is eight point four crore ARR. Eight point four divided by eight crore is a hundred and five percent. The bank expansion at two point four crore is inside those seven, not on top of them."
+    probes:
+      quota_clarification: "It reconciles. Eight point four crore ARR closed, against eight crore ARR quota."
+    more: []
+
+  perf_self_sourced:
+    answer: "About twenty percent started from a meeting I booked. The rest came from customer success, an existing champion, or a partner."
+    probes:
+      self_sourced_pct: "Twenty percent. My own first meeting."
+    more: []
+
+  rp_objection:
+    answer: "Two questions before I claim anything. Is this production customer data, and is a region mandatory? I won't guess where a database sits. At my current product the exit was a contractual export after security review. Here I would book your CISO with a solutions architect this week, and I would want residency on the order form, not in an email."
+    probes:
+      roleplay_response: "If the board needs regions named, that list has to be confirmed and written into the order. I won't recite one from memory."
+    more: []
+
+  rp_exit:
+    answer: "I tell them I don't know, I write the question down, and I bring the solutions architect. I don't cover the gap with a compliance adjective."
+    probes:
+      unknown_detail_handling: "Admit it on the call. Follow up with the person who owns the control."
+    more: []
+
+  fit_motion:
+    answer: "One of the seven was a new paying account. About fifteen percent. The other six were expansion or renewal."
+    probes:
+      new_logo_share: "About fifteen percent. One deal out of seven."
+    more: []
+
+  fit_segment:
+    answer: "Enterprise. Typically two thousand to twenty thousand employees. A normal cycle is eight to ten months. Average ARR last year was one point two crore, and the bank expansion was two point four."
+    probes:
+      segment: "Named enterprise accounts. Not commercial."
+      sales_cycle_days: "Eight to ten months. The bank one was about nine months."
+    more: []
+
+  fit_territory:
+    answer: "West and South India, enterprise named accounts, based in Bengaluru. I sell in English."
+    probes:
+      territory: "West and South. Not a Gurugram commercial patch."
+      languages: "English."
+    more: []
+
+  fit_comp:
+    answer: "Current CTC is ninety-five lakh. About sixty percent fixed, forty percent variable at target. I'm looking for an OTE of about one point four crore, base plus variable at plan."
+    probes:
+      current_ctc: "Ninety-five lakh CTC."
+      ctc_split: "Sixty fixed, forty variable at target."
+      ote_expectation: "About one crore forty lakh OTE."
+    more: []
+
+  fit_notice:
+    answer: "Ninety days. I resigned on the sixteenth of September. My last working day is the fourteenth of December."
+    probes:
+      notice_period: "Ninety days."
+      notice_status: "Already serving it. Resigned. Last day is 14 December 2026."
+    more: []
+
+  fit_location:
+    answer: "I'm in Bengaluru. I can travel to Gurugram about once a month. I can't do a weekly hybrid from Gurugram, and I'm not relocating."
+    probes:
+      location_hybrid: "Travel, yes. Hybrid from Gurugram, no."
+    more: []
+
+  cq_open:
+    answer: "Is this seat a monthly new-logo target, or a named-account book?"
+    probes:
+      candidate_question: "New-logo target versus named accounts."
+      candidate_done: "That's the question. Nothing further."
+    more:
+      - "That's the question. Nothing further."

@@ -1,0 +1,126 @@
+{
+  "candidate_id": "arjun_inflated_attainment",
+  "name": "Arjun Mehta",
+  "headline": "Account Executive | Cloud observability | Commercial | Gurugram",
+  "location": "Gurugram, Haryana, India",
+  "current": {
+    "title": "Account Executive",
+    "company": "Northline Observability",
+    "company_type": "mid_size_saas",
+    "start": "2023-06"
+  },
+  "history": [
+    {
+      "title": "Sales Development Representative",
+      "company": "Brightlane Software",
+      "company_type": "mid_size_saas",
+      "start": "2020-08",
+      "end": "2023-05",
+      "motion": "outbound_meetings",
+      "segment": "commercial",
+      "territory": "India",
+      "products": ["B2B SaaS for engineering teams"],
+      "buyers": ["Engineering managers"],
+      "highlights": [
+        "Booked first meetings for account executives",
+        "Outbound by cold email and LinkedIn"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "cl_role",
+      "text": "Account Executive at Northline Observability since Jun 2023",
+      "field": "current_role",
+      "value": "Account Executive, Northline Observability",
+      "unit": "text",
+      "window": "2023-06_to_present"
+    },
+    {
+      "id": "cl_start",
+      "text": "In the current AE seat since Jun 2023",
+      "field": "time_in_seat",
+      "value": "2023-06",
+      "unit": "month",
+      "window": "current"
+    },
+    {
+      "id": "cl_product",
+      "text": "Sells a cloud observability platform (logs, metrics, traces)",
+      "field": "product",
+      "value": "cloud observability platform",
+      "unit": "text",
+      "window": "current"
+    },
+    {
+      "id": "cl_buyer",
+      "text": "Sells to Heads and VPs of Engineering",
+      "field": "buyer",
+      "value": "Head of Engineering or VP Engineering",
+      "unit": "text",
+      "window": "current"
+    },
+    {
+      "id": "cl_quota_fy26",
+      "text": "₹4 crore annual quota in FY2025-26",
+      "field": "quota",
+      "value": 40000000,
+      "unit": "INR",
+      "window": "FY2025-26"
+    },
+    {
+      "id": "cl_attain_fy26",
+      "text": "Achieved 150% of that quota in FY2025-26",
+      "field": "attainment_pct",
+      "value": 150,
+      "unit": "percent",
+      "window": "FY2025-26"
+    },
+    {
+      "id": "cl_deals_fy26",
+      "text": "Closed 10 deals in FY2025-26",
+      "field": "deals_closed",
+      "value": 10,
+      "unit": "count",
+      "window": "FY2025-26"
+    },
+    {
+      "id": "cl_avg_deal_fy26",
+      "text": "Average annual contract value ₹20 lakh in FY2025-26",
+      "field": "avg_deal",
+      "value": 2000000,
+      "unit": "INR",
+      "window": "FY2025-26"
+    },
+    {
+      "id": "cl_ctc",
+      "text": "Current CTC ₹42 lakh, about 70% fixed",
+      "field": "current_ctc",
+      "value": 4200000,
+      "unit": "INR_CTC",
+      "window": "current"
+    },
+    {
+      "id": "cl_notice",
+      "text": "Notice period 60 days",
+      "field": "notice_period",
+      "value": 60,
+      "unit": "days",
+      "window": "current"
+    },
+    {
+      "id": "cl_location",
+      "text": "Based in Gurugram and open to hybrid from Gurugram",
+      "field": "location_hybrid",
+      "value": "Gurugram hybrid",
+      "unit": "text",
+      "window": "current"
+    }
+  ],
+  "languages": ["English", "Hindi"],
+  "education": [
+    {"degree": "Bachelor of Engineering", "institution_type": "private_engineering_college"}
+  ],
+  "notice_days": 60,
+  "stated_comp": {"ctc_inr": 4200000, "fixed_pct": 70}
+}

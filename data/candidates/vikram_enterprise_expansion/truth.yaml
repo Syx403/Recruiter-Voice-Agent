@@ -1,0 +1,106 @@
+# Synthetic ground truth. Not a real person.
+# Streamwell Data and Opencore Systems are real companies used only as employers.
+# Quotas, the bank expansion, and dates of resignation are this profile's fiction.
+candidate_id: vikram_enterprise_expansion
+name: Vikram Bose
+location: Bengaluru
+product: data-streaming platform (current). Previously enterprise subscriptions.
+fx_assumption: "1 USD = 84 INR, for band checks only"
+
+quota:
+  window: FY2025-26
+  window_dates: [2025-04-01, 2026-03-31]
+  owner: individual
+  unit: ARR
+  amount_inr: 80000000          # ₹8 crore ≈ USD 952k
+  period_months: 12
+  ramped: false
+  attainment_pct: 105           # ₹8.4 crore ARR
+  arr_closed_inr: 84000000
+  deals_closed: 7
+  avg_arr_inr: 12000000         # ₹1.2 crore ≈ USD 143k, at the top of a USD 10–150k commercial band
+  reconcile: "7 × ₹1.2 crore = ₹8.4 crore = 105% × ₹8 crore. Same unit. Honest."
+  new_logo_deals: 1
+  expansion_or_renewal_deals: 6
+
+motion:
+  new_logo_share_pct: 14        # 1/7 ≈ 14%. He says "about fifteen percent."
+  self_sourced_pct: 20          # meetings he booked. Most pipeline is CSM, existing champions, or partners.
+  segment: enterprise
+  employee_band: "2000-20000"
+  typical_cycle_days: [240, 300]  # 8–10 months
+  territory: "Enterprise named accounts, West and South India, based in Bengaluru"
+  selling_languages: [English]
+
+representative_deal:
+  kind: expansion                # he says so. He does not pretend it is a new logo.
+  customer: "A private-sector bank based in Mumbai. Fictional account. No real bank named."
+  first_meeting_source: customer_success
+  champion: Head of Data Platform
+  economic_buyer: CIO
+  eb_note: "CIO could say no after the champion said yes. He got the CIO meeting the CSM had not got."
+  stakeholders: [Head of Data Platform, CIO, security, legal, procurement]
+  main_blocker: "MSA redlines and a security questionnaire after a verbal yes."
+  competition: "Stay on the current contract. He does not invent another vendor's price."
+  own_actions: "Built the mutual close plan and secured the CIO meeting."
+  team_on_deal: [candidate, solutions architect, customer success manager, his manager on the EB call]
+  what_required_him: "The CIO meeting and the close plan. CSM owned the relationship, not the signature path."
+  deal_arr_inr: 24000000         # ₹2.4 crore ≈ USD 286k, above the role's USD 150k ceiling
+  cycle_days: 270
+  customer_outcome: "Customer's figure: a nightly risk batch from about six hours to under two. Not his invented ROI."
+  paper_process: "Security questionnaire, MSA redlines, then PO. He can name the order."
+
+loss:
+  customer: "A new-logo attempt at a conglomerate. Fictional."
+  type: no_decision
+  detail: "Stayed with the architect. Never reached the CIO. The group renewed the incumbent."
+  owned_point: "He would ask the architect, in week two, for the CIO meeting, and stop if he could not get it."
+  quality: "Specific and self-owned. This is his scarce new-logo evidence, and it is a loss."
+
+roleplay:
+  quality: competent_enterprise
+  says: "Asks whether the data is production customer data and which region is mandatory. Does not invent an Atlas region. Offers a solutions architect this week and wants residency on the order form."
+  pattern_note: "His instinct is a long security review. Honest for his motion. Heavy for a commercial cycle. Not an over-promise."
+  score_note: "technical_credibility 4. Hygiene is good. He is not a commercial AE in disguise."
+
+comp:
+  current_ctc_inr: 9500000
+  fixed_pct: 60
+  variable_pct_of_ctc: 40
+  ote_expectation_inr: 14000000   # ₹1.4 crore
+  ote_band_used_for_fit: "Draft brief only, ₹60–90 lakh. His ask is above it. Not a MongoDB-published band."
+  notice_days: 90
+  notice_status: serving
+  resigned_on: 2026-09-16
+  last_working_day: 2026-12-14
+  location_hybrid: "Lives in Bengaluru. Will travel to Gurugram about once a month. Will not work hybrid from Gurugram."
+
+motivation: "Notice is already running. He wants to test whether a commercial new-logo seat is his work. He is honest that his book has been expansion."
+
+expected:
+  competencies:
+    deal_execution: 4            # concrete expansion story; the new-logo evidence the card asked for is absent
+    performance_credibility: 5   # reconciles, right unit, individual, two-year not required because FY26 is clean
+    technical_credibility: 4
+    outcome_orientation: 4
+    ownership_learning: 4
+  fit:
+    motion: flag
+    segment_and_cycle: flag
+    territory_and_languages: flag
+    ote_expectation: flag
+    notice_period: pass
+    work_authorisation: flag     # India screen: location_hybrid. He will not do Gurugram hybrid.
+  recommendation: not_recommended
+  flags:
+    - new_logo_below_minimum
+    - enterprise_cycle_and_acv
+    - ote_above_draft_band
+    - will_not_do_gurugram_hybrid
+    - territory_is_enterprise_not_commercial
+  unweighted_sum_out_of_25: 21
+  recommendation_basis: >
+    Competencies would support an enterprise expansion seat (21/25).
+    They do not overcome the motion, cycle, location, and pay mismatch for this commercial new-logo preset.
+    Do not average the fit flags away.
+  employer_facts: synthetic_personal_claims_only

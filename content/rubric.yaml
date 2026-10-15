@@ -1,0 +1,58 @@
+# Canonical rubric. Every component uses these ids.
+# Source of the competency design: docs/AE_单轮面试流程_IT_AI.md (AE playbook for IT/AI companies).
+version: 1
+
+# Scoring rule: no evidence for a competency means null, never a middle
+# score. A silent dimension is reported as "not observed".
+competencies:
+  deal_execution:
+    name: Complex-deal execution and methodology
+    default_weight: 0.30
+    anchors:
+      1: Cannot name the roles in the deal or their own actions.
+      3: Names the main roles; details on the economic buyer, blockers and own actions are thin.
+      5: Clearly reconstructs the economic buyer, the stakeholders, the main blocker and their own specific actions.
+  performance_credibility:
+    name: Performance and pipeline credibility
+    default_weight: 0.25
+    anchors:
+      1: Numbers are vague or badly irreconcilable.
+      3: Numbers are mostly clear; fit with the role is middling.
+      5: Numbers are specific, self-consistent and fit the role.
+    cap_rule: Capped at 3 if check_quota_consistency is inconsistent and the clarification does not resolve it.
+  technical_credibility:
+    name: Technical credibility and AI-objection handling
+    default_weight: 0.20
+    anchors:
+      1: Evades, bluffs or over-promises (for example "our AI never makes mistakes").
+      3: Gives a basic answer with loose structure.
+      5: Structured; admits limits; knows when to bring in an SE or security team; proposes next steps.
+  outcome_orientation:
+    name: Outcome vs feature orientation
+    default_weight: 0.15
+    anchors:
+      1: Talks only about features and technology.
+      3: Mentions business results occasionally.
+      5: Naturally ties answers to quantified business impact.
+  ownership_learning:
+    name: Ownership and learning
+    default_weight: 0.10
+    anchors:
+      1: Blames others; no reflection.
+      3: Some reflection, not specific.
+      5: Names their own controllable mistakes and what they would change.
+
+fit_checks:            # not scored; status is pass | flag | unknown, compared with the role brief
+  motion: Hunter vs farmer, new-logo share
+  segment_and_cycle: Segment and sales-cycle length
+  territory_and_languages: Territory experience and languages
+  ote_expectation: On-target earnings expectation (base and variable)
+  notice_period: Notice period
+  work_authorisation: Location, work arrangement and, where the market asks it, work eligibility (never nationality)
+  must_haves: The role's must-have requirements from the JD (role.md), checked against the CV and the screen
+
+recommendation:        # computed in code
+  recommend_min: 20
+  conditional_min: 16
+  needs_verification_if_null: [performance_credibility]
+  needs_verification_if_null_count: 2

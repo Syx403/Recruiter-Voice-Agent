@@ -1,0 +1,47 @@
+# Market preset: what is local and never in a JD. A role.md names its market; the screen configuration
+# and the session's cards take currency, units, financial year, compensation wording and work-eligibility policy
+# from here. Reference notes for the reasoning step and the question generator: india.md (never spoken).
+market_id: india
+name: India
+currency: INR
+currency_words: rupees
+units: "1 lakh = 100,000; 1 crore = 100 lakh = 10,000,000; '42 LPA' = 42 lakh per annum"
+financial_year: "the April-to-March financial year (FY2025-26 = 1 April 2025 to 31 March 2026)"
+default_max_notice_days: 90
+notice_norms: "30, 60 or 90 days; buyouts are sometimes possible"
+
+# Amount conventions (code: the blind-recall check and how a CV figure is read back after recall).
+scale_words: [lakh, lakhs, crore, crores, lpa, cr]
+amount_style: indian          # 1.2 crore, 40 lakh
+
+# Spoken wording that depends on the market (cards in content/stages.yaml use these keys).
+wording:
+  quota_amount_probe: Was that quota in rupees or in US dollars?
+  quota_window_probe: "Which window is that: the April-to-March financial year, a calendar year, or the last four quarters?"
+  fit_comp:
+    variants:
+      - What is your current annual CTC, and roughly how much of it is fixed versus variable?
+      - What is your current CTC, and how is it split between fixed and variable pay?
+    short: "What's your current CTC, and what OTE are you looking for?"
+    probes:
+      comp_split: Roughly how much of that is fixed, and how much is variable at target?
+      ote_expectation: "And what on-target earnings, base plus variable at plan, are you looking for?"
+
+# Work eligibility is not asked for India seats: location and arrangement only; never nationality.
+work_eligibility: {ask: false}
+
+# Hints for the reasoning step's extraction (alt/brain/llm.py FIELD_HINTS), by field.
+field_hints:
+  quota: "quota amount with unit and currency as said, e.g. '8 crore INR'"
+  quota_window: "the period's window: April-March financial year, calendar year, or last four quarters"
+  current_comp: "current annual CTC with currency (cost to company; it is not OTE)"
+  comp_split: "fixed vs variable share of the CTC"
+
+# Added to the reasoning step's stage block (never spoken).
+brain_notes:
+  performance_verification: >-
+    Indian amounts come in lakh and crore (1 crore = 10,000,000). "FY" means 1 April to 31 March. Store amounts as
+    said; never add a crore figure to a dollar figure.
+  fit_and_logistics: >-
+    CTC is the employer's annual cost (it includes provident fund, gratuity and target variable); it is not OTE.
+    Notice of 30, 60 or 90 days is normal. Location and arrangement only; never ask nationality or sponsorship.

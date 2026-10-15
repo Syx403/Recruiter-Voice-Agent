@@ -1,0 +1,137 @@
+# Draft screen configuration (role step of the question generator); awaiting recruiter approval.
+role_id: mongodb_senior_ae_india
+title: Senior Account Executive – Commercial Growth
+company: MongoDB
+company_context: Developer data platform; the seat sells MongoDB Atlas, a managed cloud database, to fast-growing
+  companies
+location: Gurugram, India
+city: Gurugram
+work_arrangement: hybrid
+arrangement_phrase: hybrid, based in Gurugram
+market_id: india
+country: India
+currency: INR
+buyer_personas:
+- CTOs
+- Engineering and IT leaders
+- Technical end users
+products:
+- MongoDB Atlas, a managed cloud database service
+- Professional Services
+team_leadership: none
+fit:
+  motion: new_logo
+  min_new_logo_share: 50
+  segment: commercial
+  sales_cycle_days: null
+  sales_cycle_basis: unknown
+  territory: India, fast-growing and disruptive companies
+  languages: []
+  max_notice_days: 90
+  ote: not stated (the posting mentions earning potential, stock awards and an employee stock purchase plan)
+  work_eligibility_asked: false
+expected_ranges: {}
+requirements:
+- id: R1
+  check: screen
+  evidence_fields:
+  - quota
+  - attainment_pct
+  - deals_closed
+  - avg_deal
+  look_for: At least four years of full-cycle field sales, shown by quota and closing history across the window.
+  questions: []
+  years_from_cv: true
+  text: 4+ years of full-cycle field sales or closing experience
+- id: R2
+  check: screen
+  evidence_fields:
+  - new_logo_share
+  - attainment_pct
+  - self_sourced_pct
+  look_for: A majority of closed deals were new logos, attainment near or above 100 percent, and a meaningful share
+    self-sourced.
+  questions: []
+  text: A track record of opening new accounts and consistently hitting goals, ideally as a top-10% performer
+- id: R3
+  check: screen
+  evidence_fields:
+  - loss_review
+  - sales_cycle_days
+  look_for: A multi-stakeholder deal with a named economic buyer, blockers handled, and a clear account of their
+    own actions.
+  questions: []
+  text: Experience running complex sales processes
+- id: R4
+  check: screen
+  evidence_fields:
+  - self_sourced_pct
+  - first_meeting_source
+  look_for: Specific cold-calling or outbound methods that produced first meetings, not only inbound leads.
+  questions: []
+  text: Proven success with cold calling and creative pipeline generation
+- id: R5
+  check: screen
+  evidence_fields:
+  - roleplay_response
+  look_for: A clear, structured answer in the role-play that asks clarifying questions and avoids overclaiming.
+  questions: []
+  text: Strong presentation, verbal and written communication
+- id: R6
+  check: cv
+  evidence_fields: []
+  look_for: A degree in engineering, IT or computer science is listed on the CV.
+  questions: []
+  text: A degree in engineering, IT or computer science
+nice_to_have:
+- id: N1
+  kind: nice
+  text: Sales methodology training such as MEDDIC, SPIN or Challenger
+role_questions: []
+competency_weights:
+  deal_execution: 0.3
+  performance_credibility: 0.3
+  technical_credibility: 0.15
+  outcome_orientation: 0.15
+  ownership_learning: 0.1
+weights_rationale: This is a new-logo hunter seat with a cold-calling and pipeline-creation mandate, so deal execution
+  and performance credibility are raised from the rubric defaults. Technical credibility is lowered slightly because
+  the buyers are CTOs and engineering leaders but the seat sells a managed service, not deep architecture.
+objection_scenario:
+  role_played: the CTO of a fast-growing fintech company
+  concern: We're moving customer data into a new managed cloud service. Our regulators expect us to know where data
+    sits and who can access it, and I need a clear answer on that before my team spends time on a migration.
+  probe_if_weak: Which regions will our data be stored in, and who at your company can see it?
+  strong_answer: Clarifies that data residency and access controls are a question for the solutions architect, not
+    something to guess; does not over-promise on compliance; offers to bring in a specialist for a technical review;
+    proposes a concrete next meeting.
+objection_rationale: A CTO at a fast-growing company moving to a managed cloud database typically raises data residency
+  and access first, which tests whether the AE knows when to escalate rather than improvise.
+faq:
+- q: Where is this role based and how does it work?
+  a: The role is based in Gurugram, India, with a hybrid work arrangement.
+- q: What does the role sell?
+  a: The role sells MongoDB Atlas, a managed cloud database service, and Professional Services, to fast-growing
+    and disruptive companies in India.
+- q: Who are the buyers?
+  a: The main buyers are CTOs, engineering and IT leaders, and technical end users.
+- q: process
+  a: A recruiter reviews this screen and follows up about the next steps.
+next_round_suggestions:
+- A discovery role-play with a CTO at a fast-growing fintech weighing data residency and access controls, to test
+  escalation to a solutions architect.
+- A pipeline-building exercise where the candidate outlines an outbound plan for a new-logo target in India's fast-growing
+  sector.
+knockouts:
+- id: no_quota_history
+  text: never carried an individual quota
+source:
+  role_md_sha: dd07017282aa
+  source_url: https://www.cygnify.io/jobs/senior-account-executive-commercial-growth-62dde013
+  compiled_at: 1792002371.4067159
+  model: claude-haiku-5-5
+validation_issues:
+- 'requirement R3: unknown fields [''deal_open''] dropped'
+- 'role question 0: serves only requirements the cards already cover'
+- 'role question 1: serves only requirements the cards already cover'
+- 'faq ''What happens after this screen?'': the answer is not grounded in role.md'

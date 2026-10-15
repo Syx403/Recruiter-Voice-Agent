@@ -1,0 +1,160 @@
+# Approved screen configuration: every candidate for this role is screened with it.
+role_id: sg_sales_lead_ai_fintech
+title: Sales Lead – AI Fintech
+company: Undisclosed AI fintech (Cygnify client)
+company_context: An AI fintech company selling software and solutions to banks, financial institutions and fintechs;
+  the posting does not name the company or the product
+location: Singapore, Singapore
+city: Singapore
+work_arrangement: on-site
+arrangement_phrase: on-site in Singapore
+market_id: singapore
+country: Singapore
+currency: SGD
+buyer_personas:
+- Senior executives and business leaders at banks and fintechs
+- C-level stakeholders
+- Technical stakeholders
+products:
+- AI-driven solutions for banks, financial services and fintechs (not named in the posting)
+team_leadership: later
+fit:
+  motion: mixed
+  min_new_logo_share: 30
+  segment: enterprise
+  sales_cycle_days: null
+  sales_cycle_basis: unknown
+  territory: null
+  languages: []
+  max_notice_days: 90
+  ote: null
+  work_eligibility_asked: true
+expected_ranges: {}
+requirements:
+- id: R1
+  check: cv
+  evidence_fields: []
+  look_for: Six or more years of sales or business development experience, ideally in banking, financial services,
+    fintech or enterprise technology.
+  questions: []
+  years_from_cv: true
+  text: 6–10+ years of sales or business development experience, preferably in banking, financial services, fintech,
+    enterprise technology or IT solutions
+- id: R2
+  check: screen
+  evidence_fields:
+  - new_logo_share
+  - self_sourced_pct
+  - first_meeting_source
+  look_for: A meaningful share of closed deals were new paying customers the candidate sourced or opened personally.
+  questions: []
+  text: A proven track record of new-business hunting and account acquisition
+- id: R3
+  check: screen
+  evidence_fields:
+  - segment
+  - sales_cycle_days
+  - deal_value
+  - avg_deal
+  look_for: Experience running multi-stakeholder enterprise cycles of software, SaaS, IT services or fintech solutions.
+  questions: []
+  text: Experience managing the full enterprise sales cycle, selling software, SaaS, IT services or fintech solutions
+- id: R4
+  check: question
+  evidence_fields: []
+  look_for: Working knowledge of how banks or payments businesses buy technology, including typical decision makers,
+    procurement hurdles and regulatory constraints.
+  questions:
+  - requirement_1
+  - requirement_2
+  text: Understanding of banking, payments or fintech
+- id: R5
+  check: screen
+  evidence_fields:
+  - roleplay_response
+  - economic_buyer
+  look_for: 'Credible handling of a C-level objection: clarifying, not overpromising, and proposing a concrete next
+    step.'
+  questions:
+  - requirement_1
+  text: Ability to influence C-level stakeholders, with strong negotiation, presentation and stakeholder management
+- id: R6
+  check: screen
+  evidence_fields:
+  - quota
+  - attainment_pct
+  - quota_owner
+  look_for: Personal ownership of a quota with attainment reported in a consistent unit and window.
+  questions:
+  - requirement_2
+  text: Comfortable working independently and owning targets
+- id: R7
+  check: cv
+  evidence_fields: []
+  look_for: A bachelor's degree in business, marketing, finance, technology or a related field.
+  questions: []
+  text: A bachelor's degree in business, marketing, finance, technology or a related field
+nice_to_have: []
+role_questions:
+- question: Tell me about the buyers you have sold into in banks or fintechs, and what usually made them hesitate
+    before signing?
+  requirement_ids:
+  - R4
+  - R5
+  look_for: Names specific buyer roles, the approval and compliance hurdles they faced, and how the candidate addressed
+    them.
+  field: requirement_1
+- question: Walk me through how you have built a new-logo pipeline from scratch in a regulated market, and which
+    steps in that process were hardest to get right?
+  requirement_ids:
+  - R4
+  - R6
+  look_for: Describes a self-built pipeline in a regulated buyer segment, with specific knowledge of compliance
+    or procurement steps that shaped the pipeline and personal ownership of the targets.
+  field: requirement_2
+competency_weights:
+  deal_execution: 0.3
+  performance_credibility: 0.3
+  technical_credibility: 0.15
+  outcome_orientation: 0.15
+  ownership_learning: 0.1
+weights_rationale: The JD centres on owning the full cycle and winning new logos in banks and fintechs, which shifts
+  weight toward deal execution and performance credibility, with a slight reduction in technical credibility since
+  the role is sales-led rather than technical, per the consultative but hunter-leaning remit.
+objection_scenario:
+  role_played: the Chief Risk Officer at a mid-size Singapore retail bank
+  concern: We already have a core banking vendor and a risk team that signs off every change. Why would I add another
+    AI system that my regulators will want to review?
+  probe_if_weak: Which of our existing controls would your product touch, and who on my side would have to approve
+    it?
+  strong_answer: Clarifies the scope of the product against the bank's current controls without overpromising, acknowledges
+    the regulatory review burden, proposes bringing in presales or a solutions specialist to map the controls, and
+    suggests a scoped discovery meeting with risk and compliance as the next step.
+objection_rationale: A bank or fintech buyer at senior level usually raises regulatory and integration risk before
+  value, so this objection tests whether the AE can handle a C-level risk concern without defensiveness or overclaiming.
+faq:
+- q: Where is the role based and how does it work?
+  a: The role is based in Singapore and is on-site.
+- q: Who will I be selling to?
+  a: Senior executives and business leaders at banks and fintechs, including C-level and technical stakeholders.
+- q: process
+  a: A recruiter reviews this screen and follows up about the next steps.
+next_round_suggestions:
+- A discovery role-play with a bank CRO who has recently been burned by a failed AI vendor rollout and is wary of
+  regulatory review.
+- A deal walkthrough on a multi-stakeholder fintech opportunity, focusing on how the candidate would map economic
+  buyers, technical evaluators and compliance sign-off.
+- A pipeline and forecasting discussion testing how the candidate builds a qualified new-logo pipeline from zero
+  against a revenue target.
+knockouts:
+- id: no_quota_history
+  text: never carried an individual quota
+source:
+  role_md_sha: 3570bba1de12
+  source_url: https://www.cygnify.io/jobs/sales-lead-ai-fintech-c80976f8
+  compiled_at: 1792031976.728756
+  model: claude-haiku-5-5
+approval:
+  by: recruiter
+  at: 1792034313.2054882
+  note: ''

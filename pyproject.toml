@@ -1,0 +1,28 @@
+[project]
+name = "ae-voice-screener"
+version = "0.0.1"
+description = "A voice agent that runs first-round screens for Account Executive roles"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=1.13.0",
+    "fastapi>=0.143.0",
+    "httpx>=0.28.1",
+    "keyring>=25",
+    "numpy>=2.5.4",
+    "pyyaml>=6.0.3",
+    "sqlmodel>=0.0.48",
+    "uvicorn[standard]>=0.54.0",
+    "websockets>=16.1.1",
+]
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+alt = [
+    "langgraph>=1.2.15",
+    "langgraph-checkpoint-sqlite>=3.1.2",
+]
+dev = [
+    "pytest>=9.1.1",
+]

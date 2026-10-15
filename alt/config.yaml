@@ -1,0 +1,15 @@
+# App configuration: voice model, brain, budget caps, port. config/config.yaml holds the shared core's settings.
+voice:
+  model: gpt-live-1
+  voice: marin
+  usd_per_minute: 0.05          # session time, billed per second (models/gpt-live-1)
+brain:
+  model: claude-haiku-5-5
+  deadline_s: 4.5               # hard per-turn deadline; past it the graph falls back to the card engine
+  max_tokens: 600
+  shuffle_within_stage: false   # off: some cards depend on earlier ones. A/B wording stays seeded.
+budget:
+  alt_cap_usd: 10.0             # hard cap on all app spend in runs/costs.jsonl (ledger steps alt*)
+  session_cap_usd: 1.0          # 20 minutes of gpt-live-1 plus Haiku
+server:
+  port: 8100

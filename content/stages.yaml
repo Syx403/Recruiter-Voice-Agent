@@ -1,0 +1,328 @@
+# Stage machine and question cards.
+# Code owns what is asked (cards, order, probe counts, exit conditions); the model owns how.
+# Layers: this file is the generic AE layer, the same for every role and market. A session's cards are
+# built in code (alt/pipeline/screen.py) from it plus:
+#   - the market preset (content/markets/<market>.yaml): `market_card` cards and `{role.market.*}` wording;
+#   - the role's approved screen configuration (from role.md): `{role.*}`, `{objection.*}`, the role questions
+#     (`role_question` cards) and fit targets;
+#   - the candidate's approved question plan (from candidate.md + role.md): personalised wording for some cards and at
+#     most three extra probes. A plan never changes which fields a card must capture.
+# `variants` are equivalent wordings : one is chosen per session by
+# seed. Every card should stand alone, so that order can be shuffled within a stage (off by default, alt/config.yaml).
+version: 3
+
+time:
+  wrap_up_s: 720      # the brain moves to candidate questions
+  must_close_s: 900   # the agent must close
+  hard_stop_s: 930    # the orchestrator ends the session
+
+order: [consent, background, deal_deep_dive, performance_verification,
+        ai_objection_roleplay, fit_and_logistics, candidate_questions, close]
+middle_stages: [deal_deep_dive, performance_verification, ai_objection_roleplay, fit_and_logistics]   # may be permuted
+
+# Every evidence field the cards capture, mapped to its rubric dimension or fit check (rubric.yaml).
+# `context` holds facts that are not scored (consent, background, candidate questions).
+fields:
+  consent_given: context
+  current_role: context
+  product: context
+  buyer: context
+  tenure_note: context
+  time_in_seat: context
+  motivation: context
+  requirement_1: must_haves          # the role's first requirement question (screen configuration)
+  requirement_2: must_haves
+  first_meeting_source: deal_execution
+  economic_buyer: deal_execution
+  stakeholders: deal_execution
+  main_blocker: deal_execution
+  own_actions: deal_execution
+  deal_value: deal_execution
+  cycle_length: deal_execution
+  team_on_deal: deal_execution
+  customer_outcome: outcome_orientation
+  loss_review: ownership_learning
+  quota: performance_credibility
+  quota_unit: performance_credibility
+  quota_owner: performance_credibility
+  quota_window: performance_credibility
+  period_months: performance_credibility
+  attainment_pct: performance_credibility
+  avg_deal: performance_credibility
+  deals_closed: performance_credibility
+  self_sourced_pct: performance_credibility
+  quota_clarification: performance_credibility
+  roleplay_response: technical_credibility
+  unknown_detail_handling: technical_credibility
+  new_logo_share: motion
+  segment: segment_and_cycle
+  sales_cycle_days: segment_and_cycle
+  territory: territory_and_languages
+  languages: territory_and_languages
+  current_comp: ote_expectation       # current pay in the market's usual unit (the market preset words the question)
+  comp_split: ote_expectation
+  ote_expectation: ote_expectation
+  notice_period: notice_period
+  notice_status: notice_period
+  work_location: work_authorisation   # where they are based and whether the role's arrangement works
+  work_eligibility: work_authorisation  # only in markets that ask it (eligibility only, never nationality)
+  candidate_question: context
+  candidate_done: context
+
+stages:
+  consent:
+    target_s: 45
+    goal: Disclose that you are an AI interviewer, explain the purpose and recording, and get consent and ~15 minutes.
+    skill: null
+    exit: {all: [consent_given]}
+    cards:
+      - id: consent_ack
+        short: "Are you okay to go ahead with this recorded fifteen-minute screen now?"
+        primary: >-
+          Hi, I'm {persona.name}, an AI interviewer working with Cygnify on the {role.title} role at {role.company}.
+          This is a structured screen of about fifteen minutes. It's recorded, and a human recruiter reviews
+          everything before any decision. Is that okay with you, and do you have about fifteen minutes now?
+        must_capture: [consent_given]
+        probes: {consent_given: "Just to confirm: are you happy to go ahead with a recorded AI screen now?"}
+        max_probes: 1
+
+  background:
+    target_s: 105
+    goal: Current role, what they sell and to whom; how long in the seat and why they are open to a move; the role's requirement questions.
+    skill: background-and-trajectory
+    exit: {all: [current_role, product, buyer]}
+    cards:
+      - id: bg_current
+        short: "What's your current title, what do you sell, and who signs?"
+        variants:
+          - Could you tell me your current title, the product you sell, and who usually signs?
+          - Could you walk me through your current title, the product, and the buyer who signs?
+        must_capture: [current_role, product, buyer]
+        probes:
+          current_role: What is your current title, and what kind of company is it?
+          product: In one line, what product do you sell?
+          buyer: Who signs, by title?
+        max_probes: 2
+      - id: bg_motivation
+        short: "How long have you been in this seat, and why consider a move?"
+        variants:
+          - How long have you been in this seat, and what made you take this call?
+          - How long have you carried a quota in your current seat, and why are you looking now?
+        must_capture: [time_in_seat, motivation]
+        probes:
+          time_in_seat: Have you completed a full quota year in this seat?
+          motivation: What would need to be true in the next role for you to move?
+        max_probes: 1
+      - id: bg_tenure
+        short: "What led to the short stints on your CV?"
+        when: candidate.short_tenure
+        primary: I noticed a couple of short stints on your CV. What led to those moves?
+        must_capture: [tenure_note]
+        probes: {}
+        max_probes: 0
+      - id: rq_1
+        role_question: 0      # the screen configuration's first role question; the card is dropped when there is none
+        must_capture: [requirement_1]
+        probes: {}
+        max_probes: 1
+      - id: rq_2
+        role_question: 1
+        must_capture: [requirement_2]
+        probes: {}
+        max_probes: 1
+
+  deal_deep_dive:
+    target_s: 210
+    goal: One new logo the candidate opened (how the first meeting happened, who decided, what nearly stopped it, what they personally did, the customer's outcome), then one lost deal.
+    skill: complex-deal-deconstruction
+    exit:
+      min_of: {n: 4, of: [first_meeting_source, economic_buyer, main_blocker, own_actions, deal_value, team_on_deal, customer_outcome]}
+      all: [loss_review]
+    cards:
+      - id: deal_open
+        short: "Could you walk me through a new logo you opened yourself?"
+        variants:
+          - Walk me through a new logo you opened yourself in the last eighteen months. How did you get the first meeting, who decided, and what did you personally do?
+          - Tell me about a new logo you sourced in the last eighteen months, a normal quarter for you. Who decided, what nearly stopped it, and what did you do yourself?
+        variants_by_motion:   # an expansion seat is judged on a deal it would actually run (same fields)
+          expansion:
+            - Walk me through an expansion you led in an existing account in the last eighteen months. How did the opportunity start, who decided, and what did you personally do?
+            - Tell me about a large upsell or cross-sell you drove in the last eighteen months. Who decided, what nearly stopped it, and what did you do yourself?
+        must_capture: [first_meeting_source, economic_buyer, main_blocker, own_actions, deal_value, team_on_deal, customer_outcome]
+        probes:
+          first_meeting_source: "How did that first meeting happen: your own outbound, an SDR, inbound, or a partner?"
+          economic_buyer: "Who could say no after your main contact said yes? If one person decided, say so, and tell me the deal size."
+          main_blocker: What nearly stopped that deal, and what did you do about it?
+          own_actions: What did you do yourself, as opposed to the team?
+          deal_value: What was the contract value, and was that annual or the full contract?
+          team_on_deal: "Who else was on the deal, like an SE, manager or partner, and what would not have happened without you?"
+          customer_outcome: "What changed for the customer in their numbers, or did they never quantify it?"
+        max_probes: 3
+      - id: deal_loss
+        short: "Which deal did you expect to win but lose, and what would you change?"
+        variants:
+          - Tell me about a deal you expected to win and lost. Where did it break, and what would you do differently?
+          - Describe a loss from the last eighteen months that you thought was yours. At which point would you act differently?
+        must_capture: [loss_review]
+        probes: {loss_review: "Was that a competitor, no decision, price, a product gap, or the champion leaving?"}
+        max_probes: 1
+
+  performance_verification:
+    target_s: 150
+    goal: Quota with its unit, owner and window, attainment, deal size and count, one value at a time; then the consistency check and the CV check.
+    skill: performance-verification
+    exit:
+      tool_called: [check_quota_consistency]
+      all: [self_sourced_pct]
+    cards:
+      - id: perf_quota
+        short: "What was last year's quota, was it yours alone, and on what unit?"
+        variants:
+          - What quota did you carry last year, was it on your name, and was it measured on ARR, ACV, TCV, or bookings?
+          - Let's talk numbers for your last full year. What was your quota, was it yours alone, and was it counted on recurring revenue or total contract value?
+        must_capture: [quota, quota_unit, quota_owner, quota_window]
+        probes:
+          quota: "{role.market.wording.quota_amount_probe}"
+          quota_unit: Was that quota counted on annual recurring revenue, or on the full contract value?
+          quota_owner: Was that quota on your name alone, or shared with a team?
+          quota_window: "{role.market.wording.quota_window_probe}"
+        max_probes: 2
+      - id: perf_attainment
+        short: "What percent of that quota did you close?"
+        variants:
+          - What percentage of that quota did you close in that same window?
+          - What percent of that quota did you actually finish at?
+        must_capture: [attainment_pct]
+        probes: {attainment_pct: "To the nearest percent, what did you finish at?"}
+        max_probes: 1
+      - id: perf_deals
+        short: "What was your average deal size, and how many deals did you close?"
+        variants:
+          - In that same window, what was your average deal size, in the same unit as the quota, and how many deals did you close?
+          - How many deals did you close in that window, and what was the average size in the same unit as the quota?
+        must_capture: [avg_deal, deals_closed]
+        probes:
+          avg_deal: What was the average deal size?
+          deals_closed: And how many deals did you close in that period?
+        max_probes: 2
+      - id: perf_check
+        action: check_quota_consistency      # code inserts `perf_clarify` if inconsistent, `perf_cv` if the CV differs
+        primary: Read back the normalised figures in one short sentence. Do not tell the candidate the result.
+        must_capture: []
+        max_probes: 0
+      - id: perf_self_sourced
+        short: "What share of your closed deals started from a meeting you booked?"
+        variants:
+          - Of the deals you closed, roughly what share started from a meeting you booked yourself, not an SDR or marketing?
+          - What percent of those closed deals began from a meeting you booked, rather than an SDR, marketing, or a partner?
+        must_capture: [self_sourced_pct]
+        probes: {self_sourced_pct: "As a rough percentage, how much of it was self-sourced?"}
+        max_probes: 1
+
+  ai_objection_roleplay:
+    target_s: 90
+    goal: Objection hygiene, one exchange — the candidate handles the role's buyer objection; then out of role, how they handle a technical detail they don't know.
+    skill: ai-objection-roleplay
+    exit: {all: [roleplay_response, unknown_detail_handling]}
+    cards:
+      - id: rp_objection
+        short: "Repeat the customer's concern, in character, in one sentence."
+        primary: >-
+          Say: "For the next minute I'll play {objection.role_played}, and you're the account executive. Answer as
+          you would on a real call." Then, in character, raise this concern: "{objection.concern}" You play the
+          customer only: never answer the objection yourself.
+        must_capture: [roleplay_response]
+        probes: {roleplay_response: "Still in character: \"{objection.probe_if_weak}\""}
+        min_probes: 1         # the in-character follow-up is always asked once
+        max_probes: 1
+      - id: rp_exit
+        short: "What would you do if a customer asked a technical detail you didn't know?"
+        strict: true          # its field is accepted only after this card is asked
+        primary: >-
+          Step out of the role-play explicitly ("Thanks, let's step out of the role-play."), then ask: If a
+          customer asked you a technical detail you didn't know, what would you do?
+        must_capture: [unknown_detail_handling]
+        probes: {}
+        max_probes: 0
+
+  fit_and_logistics:
+    target_s: 120
+    goal: Motion (new logos), segment and cycle, territory, compensation (current pay and expected OTE), notice, location and arrangement, and work eligibility where the market asks it.
+    skill: [sales-motion-fit, comp-and-logistics]
+    exit: {all: [new_logo_share, segment, territory, ote_expectation, notice_period, work_location]}
+    cards:
+      - id: fit_motion
+        short: "What share of your deals were new paying customers?"
+        variants:
+          - Of the deals you closed last year, roughly what share were new paying customers, not renewals or extra products in accounts you already had?
+          - What percent of last year's closed deals were new paying accounts, excluding renewals and expansion?
+        must_capture: [new_logo_share]
+        probes: {new_logo_share: "Roughly what percent, as a number?"}
+        max_probes: 1
+      - id: fit_segment
+        short: "What size of companies do you sell to, and how long is a typical cycle?"
+        variants:
+          - What employee band or deal-size band do you usually sell to, and how long is a typical cycle from first meeting to signature?
+          - Which company size do you sell to, by employees or by annual contract value, and how long is a typical cycle?
+        must_capture: [segment, sales_cycle_days]
+        probes: {segment: "What is the employee band, or the typical annual contract value?", sales_cycle_days: "How long from first meeting to signature?"}
+        max_probes: 1
+      - id: fit_territory
+        short: "Which territories have you covered, and which languages do you sell in?"
+        variants:
+          - Which territories have you covered, and which languages do you actually sell in?
+          - What territory have you covered, and which languages do you use on sales calls?
+        must_capture: [territory, languages]
+        probes: {territory: "Which cities or regions were on your patch?", languages: "Which languages do you sell in, not only speak?"}
+        max_probes: 1
+      - id: fit_comp
+        market_card: fit_comp   # wording from the market preset
+        must_capture: [current_comp, comp_split, ote_expectation]
+        max_probes: 2
+      - id: fit_notice
+        short: "What's your notice period, and have you resigned?"
+        variants:
+          - What is your notice period, and have you already resigned?
+          - How long is your notice, and is that still ahead of you or already being served?
+        must_capture: [notice_period, notice_status]
+        probes: {notice_status: "Have you resigned, and could the notice be bought out?"}
+        max_probes: 1
+      - id: fit_location
+        short: "Where are you based, and does {role.arrangement_phrase} work?"
+        variants:
+          - This role is {role.arrangement_phrase}. Where are you based, and does that work for you?
+          - The role is {role.arrangement_phrase}. Which city are you in, and would that arrangement work for you?
+        must_capture: [work_location]
+        max_probes: 0
+      - id: fit_eligibility
+        market_card: work_eligibility   # only when the market preset asks it; eligibility only
+        must_capture: [work_eligibility]
+        max_probes: 0
+
+  candidate_questions:
+    target_s: 60
+    goal: Answer what the screen configuration can answer; log the rest for the recruiter.
+    skill: candidate-questions-and-close
+    exit: {all: [candidate_done]}
+    cards:
+      - id: cq_open
+        short: "What questions do you have about the role or the process?"
+        variants:
+          - What questions do you have about the role or the process?
+          - What would you like to ask about the role or how the process works?
+        must_capture: [candidate_done]
+        probes: {candidate_done: "Is there anything else you'd like to ask?"}
+        max_probes: 2
+
+  close:
+    target_s: 30
+    goal: Thank the candidate, explain next steps, and end the call.
+    skill: candidate-questions-and-close
+    exit: {}
+    cards:
+      - id: close_next
+        primary: >-
+          Thank the candidate and explain next steps: a recruiter reviews the screen and gets back within two
+          business days.
+        must_capture: []
+        max_probes: 0

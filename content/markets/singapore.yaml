@@ -1,0 +1,47 @@
+# Market preset: what is local and never in a JD. Reference notes: singapore.md (never spoken).
+market_id: singapore
+name: Singapore
+currency: SGD
+currency_words: Singapore dollars
+units: "amounts in thousands ('180k') or millions; regional deals are often quoted in US dollars"
+financial_year: "usually the calendar year; some firms use April-to-March, so always ask which window"
+default_max_notice_days: 90
+notice_norms: "one to three months; two to three months is common for senior sales roles; buyouts are negotiated"
+
+scale_words: []
+amount_style: western         # 1.6 million, 450 thousand
+
+wording:
+  quota_amount_probe: Was that quota in Singapore dollars or in US dollars?
+  quota_window_probe: "Which window is that: a calendar year, a financial year, or the last four quarters?"
+  fit_comp:
+    variants:
+      - What is your current base salary, and what variable or commission do you earn at target?
+      - How is your current pay structured, base salary versus variable at target?
+    short: "What's your current base and variable, and what OTE are you looking for?"
+    probes:
+      comp_split: And what is the variable or commission at target, on top of the base?
+      ote_expectation: "And what on-target earnings, base plus variable at plan, are you looking for?"
+
+# Eligibility only: never nationality, citizenship or residency status (fair-employment practice in Singapore).
+work_eligibility:
+  ask: true
+  variants:
+    - Are you currently able to work in Singapore, or would this role need a work pass for you?
+    - Would you need a work pass to take this role in Singapore, or are you already able to work here?
+  short: "Would you need a work pass for this role?"
+
+field_hints:
+  quota: "quota amount with unit and currency as said, e.g. '1.2 million SGD' or '900k USD'"
+  quota_window: "the period's window: calendar year, a financial year, or last four quarters"
+  current_comp: "current annual base salary with currency (and any guaranteed thirteenth month, if they mention it)"
+  comp_split: "variable or commission at target, as an amount or a share of base"
+
+brain_notes:
+  performance_verification: >-
+    Singapore and regional deals are often quoted in US dollars; record the currency as said. Ask which window when
+    they say "last year": calendar years are common.
+  fit_and_logistics: >-
+    Pay is usually base plus variable or commission; a thirteenth-month payment (AWS) is common and is not
+    variable. Notice of one to three months is normal. Ask work eligibility only as "able to work here or need a
+    work pass"; never ask nationality, citizenship or residency status.

@@ -1,0 +1,106 @@
+# Synthetic candidate (older answer-bank format). Fallback for the scripted screen.
+# Trap: claimed attainment does not reconcile with deal size × deal count.
+sim_candidate_id: arjun_inflated_attainment
+name: Arjun Mehta (synthetic)
+accent_voice: en-IN-PrabhatNeural
+locale: en-IN
+role_id: mongodb_senior_ae_india
+short_tenure: false
+cv_summary: >-
+  Synthetic profile. Account Executive at a mid-size Indian SaaS company selling a cloud observability
+  platform to engineering leaders at commercial and mid-market companies; 6 years in SaaS sales, 4 as a
+  closing AE; previously an SDR. Based in Gurgaon.
+ground_truth:
+  quota: {amount: 8, unit: crore, currency: INR}
+  period_months: 12
+  attainment_pct: 140          # claimed; deal size × count implies about 75%
+  avg_deal: {amount: 40, unit: lakh, currency: INR}
+  deals_closed: 15
+  self_sourced_pct: 60
+  motion: new_logo
+  new_logo_share: 70
+expected:
+  competencies: {deal_execution: 4, performance_credibility: 2, technical_credibility: 3,
+                 outcome_orientation: 3, ownership_learning: 3}
+  recommendation: not_recommended   # 5 x (0.3x4 + 0.3x2 + 0.2x3 + 0.1x3 + 0.1x3) = 15.0
+  flags: [inflated_attainment]
+# Fixed answers per card: `answer` for the card's question, `probes` keyed by the probed field, `more` for
+# further turns on the same card.
+answers:
+  consent_ack:
+    answer: Yes, that's fine, I have about fifteen minutes now.
+  bg_current:
+    answer: Sure. I'm an Account Executive at a SaaS company here in Gurgaon. We sell a cloud observability platform, mostly to engineering leaders, so CTOs and heads of platform at commercial and mid-market companies.
+    probes:
+      product: 'It''s an observability platform: logs, metrics and traces in one place.'
+      buyer: Usually the VP of Engineering or the CTO signs.
+  deal_complex:
+    answer: 'The most complex one was a fintech in Bangalore last year. It started with an inbound from a platform engineer, and it took about seven months. The VP of Engineering was our champion, but the real economic buyer was the CFO, because it replaced two existing tools. There were six people in the decision: engineering, security, procurement, finance, and two team leads.'
+    probes:
+      main_blocker: The biggest blocker was security. Their CISO didn't want logs leaving India. I personally set up a session with our solutions engineer and their security team, and we got them a data residency commitment for the Mumbai region.
+      own_actions: I ran the mutual action plan with the champion every week, and I built the business case for the CFO myself.
+      deal_value: The final contract was about one point two crore rupees for the first year.
+      contribution_share: I'd say about seventy percent was my work. The SE was critical on the security part.
+      economic_buyer: The CFO. I got to her through the VP of Engineering, who set up a business-case review.
+      stakeholders: 'Six people: engineering, security, procurement, finance, and two team leads.'
+      cycle_length: About seven months from the first call to signature.
+  deal_loss:
+    answer: We lost a retail company to a cheaper competitor. Honestly, I was single-threaded on one engineering manager, and when he left the company the deal stalled. If I did it again, I'd get to the head of engineering in the first month, not the fourth.
+    probes:
+      loss_review: Right after the first technical win, I should have asked for the meeting with the budget owner.
+  perf_quota:
+    answer: My quota last year was eight crore rupees, for the full financial year.
+    probes:
+      quota: Yes, that's in Indian rupees.
+      period_months: Yes, annual, twelve months.
+  perf_attainment:
+    answer: I closed about a hundred and forty percent of it.
+    probes:
+      attainment_pct: About one hundred forty percent.
+  perf_deals:
+    answer: Average deal size was around forty lakh, and I closed fifteen deals.
+    probes:
+      avg_deal: Around forty lakh rupees.
+      deals_closed: Fifteen deals.
+  perf_check:
+    answer: Yes, that's right.
+  perf_clarify:
+    answer: Ah, yes, some of that was multi-year bookings that counted towards quota. The first-year value was lower.
+  perf_self_sourced:
+    answer: About sixty percent I sourced myself, the rest came from marketing and SDRs.
+    probes:
+      self_sourced_pct: About sixty percent.
+  rp_objection:
+    answer: That's a fair concern. Your data isn't used to train any models, and the AI is very accurate, so mistakes are really rare. We have a lot of customers in fintech who are happy with it.
+    probes:
+      roleplay_response: On data residency, we do have an India region, so your data can stay in India. I'd have to check the details with our team.
+  rp_exit:
+    answer: I'd be honest that I don't know, and bring in our solutions engineer or security team, and follow up in writing within a day.
+  fit_motion:
+    answer: About seventy percent were new logos.
+  fit_segment:
+    answer: Mostly commercial and mid-market, so roughly two hundred to two thousand employees, and the cycle is usually three to five months.
+    probes:
+      sales_cycle_days: Usually about three to five months.
+  fit_territory:
+    answer: I've covered North and West India. I sell in English and Hindi.
+    probes:
+      languages: English and Hindi.
+  fit_ote:
+    answer: I'm looking for around seventy-five lakh on-target, roughly sixty-forty base to variable.
+  fit_notice:
+    answer: Sixty days.
+  fit_auth:
+    answer: Yes, I am eligible to work in India, no sponsorship needed.
+  cq_open:
+    answer: 'Yes, one question: how big is the team I''d join?'
+    more:
+    - No, that's all from me, thanks.
+  close_next:
+    answer: Thank you, bye.
+# Spoken over the interviewer 1.5 s into the given card's question (scripted --interrupt test).
+interrupts:
+  consent_ack: "Sorry, sorry, who are you exactly?"
+  bg_current: "By the way, what's the name of your father?"
+  perf_quota: "Sorry, do you mean my annual quota?"
+  fit_segment: "Can we skip this one? Next question please."

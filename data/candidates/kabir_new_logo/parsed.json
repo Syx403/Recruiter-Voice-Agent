@@ -1,0 +1,168 @@
+{
+  "candidate_id": "kabir_new_logo",
+  "name": "Kabir Sen",
+  "headline": "Account Executive | Developer tools | New logo | Gurugram",
+  "location": "Gurugram, Haryana, India",
+  "current": {
+    "title": "Account Executive",
+    "company": "Arcbridge Labs",
+    "company_type": "developer_tools",
+    "start": "2023-03"
+  },
+  "history": [
+    {
+      "title": "Account Executive",
+      "company": "Testwise Cloud",
+      "company_type": "developer_tools",
+      "start": "2021-01",
+      "end": "2023-02",
+      "motion": "new_logo",
+      "segment": "commercial",
+      "territory": "India",
+      "products": ["developer testing platform"],
+      "buyers": ["engineering leaders"],
+      "highlights": ["Carried an individual quota"]
+    },
+    {
+      "title": "Sales Development Representative",
+      "company": "Helmdesk Software",
+      "company_type": "saas",
+      "start": "2019-07",
+      "end": "2020-12",
+      "motion": "outbound_meetings",
+      "segment": "commercial",
+      "territory": "India",
+      "products": ["B2B SaaS"],
+      "buyers": ["commercial buyers"],
+      "highlights": ["Booked outbound meetings for the India commercial team"]
+    }
+  ],
+  "claims": [
+    {
+      "id": "cl_role",
+      "text": "Account Executive at Arcbridge Labs since Mar 2023",
+      "field": "current_role",
+      "value": "Account Executive, Arcbridge Labs",
+      "unit": "text",
+      "window": "2023-03_to_present"
+    },
+    {
+      "id": "cl_start",
+      "text": "In the current AE seat since Mar 2023",
+      "field": "time_in_seat",
+      "value": "2023-03",
+      "unit": "month",
+      "window": "current"
+    },
+    {
+      "id": "cl_product",
+      "text": "Sells an API platform to commercial accounts",
+      "field": "product",
+      "value": "API platform",
+      "unit": "text",
+      "window": "current"
+    },
+    {
+      "id": "cl_buyer",
+      "text": "Sells to engineering leaders",
+      "field": "buyer",
+      "value": "engineering leaders",
+      "unit": "text",
+      "window": "current"
+    },
+    {
+      "id": "cl_quota_fy26",
+      "text": "₹4.0 crore individual ARR quota in FY2025-26",
+      "field": "quota",
+      "value": 40000000,
+      "unit": "INR",
+      "window": "FY2025-26"
+    },
+    {
+      "id": "cl_quota_unit_fy26",
+      "text": "FY2025-26 quota unit was ARR, on his name",
+      "field": "quota_unit",
+      "value": "ARR",
+      "unit": "category",
+      "window": "FY2025-26"
+    },
+    {
+      "id": "cl_attain_fy26",
+      "text": "110% of the FY2025-26 ARR quota",
+      "field": "attainment_pct",
+      "value": 110,
+      "unit": "percent",
+      "window": "FY2025-26"
+    },
+    {
+      "id": "cl_deals_fy26",
+      "text": "20 deals closed in FY2025-26",
+      "field": "deals_closed",
+      "value": 20,
+      "unit": "count",
+      "window": "FY2025-26"
+    },
+    {
+      "id": "cl_avg_fy26",
+      "text": "Average ARR ₹22 lakh in FY2025-26",
+      "field": "avg_deal",
+      "value": 2200000,
+      "unit": "INR_ARR",
+      "window": "FY2025-26"
+    },
+    {
+      "id": "cl_new_logo",
+      "text": "16 of 20 FY2025-26 deals were new paying accounts",
+      "field": "new_logo_share",
+      "value": 80,
+      "unit": "percent",
+      "window": "FY2025-26"
+    },
+    {
+      "id": "cl_self_sourced",
+      "text": "14 of 20 closed deals started from a meeting he booked",
+      "field": "self_sourced_pct",
+      "value": 70,
+      "unit": "percent",
+      "window": "FY2025-26"
+    },
+    {
+      "id": "cl_prior_attain",
+      "text": "105% of a ₹3.2 crore individual ARR quota in FY2024-25",
+      "field": "attainment_pct",
+      "value": 105,
+      "unit": "percent",
+      "window": "FY2024-25"
+    },
+    {
+      "id": "cl_outcome",
+      "text": "Jaipur logo: champion said diagnosis time on three services went from about two days to same day",
+      "field": "customer_outcome",
+      "value": "about two days to same day, three services",
+      "unit": "text",
+      "window": "FY2025-26"
+    },
+    {
+      "id": "cl_notice",
+      "text": "Notice period 90 days, not currently serving",
+      "field": "notice_period",
+      "value": 90,
+      "unit": "days",
+      "window": "current"
+    },
+    {
+      "id": "cl_location",
+      "text": "Based in Gurugram, hybrid from Gurugram",
+      "field": "location_hybrid",
+      "value": "Gurugram hybrid",
+      "unit": "text",
+      "window": "current"
+    }
+  ],
+  "languages": ["English"],
+  "education": [
+    {"degree": "Bachelor of Technology", "institution_type": "private_university"}
+  ],
+  "notice_days": 90,
+  "stated_comp": null
+}

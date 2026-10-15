@@ -1,0 +1,24 @@
+# Runtime configuration.
+voice:
+  provider: openai
+  model: gpt-realtime-2.1             # used only by the directive-driven loop in backend/
+  reasoning_effort: minimal            # it only voices the directive from code
+  voice: marin
+  transcription_model: gpt-realtime-whisper
+  transcription_language: en
+  noise_reduction: near_field
+  # Turn taking. The provider detects speech and turn ends; code decides whether a sound
+  # is a real turn: only a transcript with a non-filler word interrupts the interviewer or gets a reply.
+  turn_detection: {type: semantic_vad, eagerness: medium}   # unfinished sentences are held by code
+  reply_gate_timeout_ms: 1500     # wait this long for the transcript before replying to a long segment
+defaults:
+  persona: rigorous_verifier
+  role: mongodb_senior_ae_india
+budget:
+  total_usd: 20
+  session_cap_usd:
+    gpt-realtime-2.1-mini: 1.0
+    gpt-realtime-2.1: 2.0
+paths:
+  runs: runs
+  db: runs/screener.sqlite

@@ -1,0 +1,144 @@
+# Draft screen configuration (role step of the question generator); awaiting recruiter approval.
+role_id: mongodb_senior_ae_india
+title: Senior Account Executive – Commercial Growth
+company: MongoDB
+company_context: Developer data platform; the seat sells MongoDB Atlas, a managed cloud database, to fast-growing
+  companies
+location: Gurugram, India
+city: Gurugram
+work_arrangement: hybrid
+arrangement_phrase: hybrid, based in Gurugram
+market_id: india
+country: India
+currency: INR
+buyer_personas:
+- CTOs
+- Engineering and IT leaders
+- Technical end users
+products:
+- MongoDB Atlas, a managed cloud database service
+- Professional Services
+team_leadership: none
+fit:
+  motion: new_logo
+  min_new_logo_share: 50
+  segment: commercial
+  sales_cycle_days: null
+  sales_cycle_basis: unknown
+  territory: India, fast-growing and disruptive companies
+  languages: []
+  max_notice_days: 90
+  ote: not stated (the posting mentions earning potential, stock awards and an employee stock purchase plan)
+  work_eligibility_asked: false
+expected_ranges: {}
+requirements:
+- id: R1
+  check: screen
+  evidence_fields:
+  - quota
+  - attainment_pct
+  - avg_deal
+  - deals_closed
+  look_for: At least four years of closing experience with quota attainment and deal volume that can be verified.
+  questions: []
+  years_from_cv: true
+  text: 4+ years of full-cycle field sales or closing experience
+- id: R2
+  check: screen
+  evidence_fields:
+  - new_logo_share
+  - attainment_pct
+  - self_sourced_pct
+  look_for: A majority of closed deals were new logos, with attainment at or above target and meaningful self-sourced
+    share.
+  questions: []
+  text: A track record of opening new accounts and consistently hitting goals, ideally as a top-10% performer
+- id: R3
+  check: screen
+  evidence_fields:
+  - economic_buyer
+  - main_blocker
+  - own_actions
+  look_for: A described multi-stakeholder deal with clear buyer mapping, blockers handled and personal actions.
+  questions: []
+  text: Experience running complex sales processes
+- id: R4
+  check: question
+  evidence_fields:
+  - first_meeting_source
+  - self_sourced_pct
+  look_for: Specific cold-calling or outbound methods that produced first meetings, beyond generic prospecting.
+  questions:
+  - requirement_1
+  text: Proven success with cold calling and creative pipeline generation
+- id: R5
+  check: screen
+  evidence_fields:
+  - roleplay_response
+  look_for: Clear, structured and concise communication during the objection exchange.
+  questions: []
+  text: Strong presentation, verbal and written communication
+- id: R6
+  check: cv
+  evidence_fields: []
+  look_for: A degree in engineering, IT or computer science on the CV.
+  questions: []
+  text: A degree in engineering, IT or computer science
+nice_to_have:
+- id: N1
+  kind: nice
+  text: Sales methodology training such as MEDDIC, SPIN or Challenger
+role_questions:
+- question: Walk me through how you built pipeline in a new market where you had no existing relationships?
+  requirement_ids:
+  - R4
+  look_for: Concrete outbound channels, prospecting sequences and how they turned cold contacts into first meetings.
+  field: requirement_1
+competency_weights:
+  deal_execution: 0.25
+  performance_credibility: 0.3
+  technical_credibility: 0.2
+  outcome_orientation: 0.15
+  ownership_learning: 0.1
+weights_rationale: The JD is a new-logo hunter seat with monthly, quarterly and annual new-logo targets and a requirement
+  for proven cold-calling and pipeline generation, so performance credibility rises. Deal execution stays high for
+  complex sales processes, while technical credibility is kept at its default because buyers are CTOs and engineering
+  leaders for a developer data platform.
+objection_scenario:
+  role_played: The CTO of a fast-growing SaaS company that already runs a self-managed database cluster
+  concern: We already run our own database cluster and our engineers know it well. Moving to a managed service means
+    losing control over performance and data location, and I have no reason to take that risk right now.
+  probe_if_weak: Which of those concerns matters most to you, and what would have to be true for you to even review
+    a managed option?
+  strong_answer: Clarifies which concern is primary, avoids over-promising on performance or residency, offers to
+    bring in a solutions architect for a technical review, and proposes a short follow-up with the engineering lead.
+objection_rationale: A CTO buyer's first risk in saying yes is losing operational control and data placement, which
+  is a more realistic early objection than AI hallucination for a managed database sold to engineering leaders.
+faq:
+- q: Where is this role based and how does it work?
+  a: The role is based in Gurugram, India, and is hybrid.
+- q: What does the role sell?
+  a: The role sells MongoDB Atlas, a managed cloud database, and Professional Services, to fast-growing and disruptive
+    companies in India.
+- q: Who are the buyers?
+  a: The main buyers are CTOs, engineering and IT leaders, and technical end users.
+- q: process
+  a: A recruiter reviews this screen and follows up about the next steps.
+next_round_suggestions:
+- A discovery role-play with a CTO at a fast-growing SaaS company that runs a self-managed database cluster and
+  is weighing a move to a managed service.
+- A pipeline-building exercise asking the candidate to outline an outbound plan for a new vertical in India, using
+  Sales Navigator, ZoomInfo and Outreach.
+knockouts:
+- id: no_quota_history
+  text: never carried an individual quota
+source:
+  role_md_sha: dd07017282aa
+  source_url: https://www.cygnify.io/jobs/senior-account-executive-commercial-growth-62dde013
+  compiled_at: 1792031961.995574
+  model: claude-haiku-5-5
+validation_issues:
+- 'requirement R3: unknown fields [''deal_open''] dropped'
+- 'requirement ''N1'': not a [must] id of role.md, or listed twice'
+- 'role question 1: serves only requirements the cards already cover'
+- 'faq ''What happens after this screen?'': the answer is not grounded in role.md'

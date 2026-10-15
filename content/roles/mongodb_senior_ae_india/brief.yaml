@@ -1,0 +1,44 @@
+# Hand-written role brief, used only when the role has no approved screen configuration (screen.yaml).
+role_id: mongodb_senior_ae_india
+title: Senior Account Executive – Commercial Growth
+company: MongoDB
+company_context: Developer data platform; selling Atlas (cloud database) to fast-growing companies
+location: Gurugram, India (hybrid)
+country: India
+currency: INR
+fit:
+  motion: new_logo                 # new_logo | expansion | mixed
+  min_new_logo_share: 50
+  segment: commercial              # smb | commercial | mid_market | enterprise
+  sales_cycle_days: [30, 120]
+  territory: India
+  languages: [English]
+  ote_inr: [6000000, 9000000]      # draft range for the fit check, not from the JD; never spoken to the candidate
+  max_notice_days: 90
+buyer_personas: [CTO, Engineering/IT leaders, technical end users]
+must_haves:
+  - {id: full_cycle_closing, text: "4+ years full-cycle field sales/closing"}
+  - {id: new_logo_track, text: "consistent new-logo quota attainment"}
+knockouts:                         # applied by the recruiter, not automatically (an early-stage revenue target is not
+                                   # the same fact as never owning a number)
+  - {id: no_quota_history, text: "never carried an individual quota"}
+competency_weights:
+  deal_execution: 0.30
+  performance_credibility: 0.30
+  technical_credibility: 0.20
+  outcome_orientation: 0.10
+  ownership_learning: 0.10
+expected_ranges:
+  avg_deal_usd: [10000, 150000]
+  quota_usd: [400000, 2000000]
+objection_scenario:                # the buyer's real objection for this product
+  role_played: "the Head of Information Security at a fast-growing fintech"
+  concern: "We will not put customer data in a database we do not run. Where does Atlas sit, who can access it, and what happens to our data if we leave?"
+  probe_if_weak: "Our board will not sign without a clear answer on data residency. Which regions, and is that a contractual commitment or a roadmap?"
+faq:                               # what the agent may answer in candidate_questions
+  - {q: "team and territory", a: "You'd join the Commercial Growth team covering fast-growing companies across India."}
+  - {q: "work arrangement", a: "Hybrid, based in Gurugram."}
+  - {q: "process", a: "If this screen goes well, the next round is with the hiring manager, including a live discovery-call role-play."}
+next_round_suggestions:
+  - "Live discovery-call role-play with a CTO weighing a migration from self-managed Postgres to Atlas"
+  - "Verify attainment and quota unit (ARR vs TCV) with a reference or a commission statement"

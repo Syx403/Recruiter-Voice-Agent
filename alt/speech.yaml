@@ -1,0 +1,61 @@
+# Spoken wording for the voice model.
+# Some cards in content/stages.yaml are written for a directive-driven voice loop, where some `primary` texts are instructions to the
+# voice model ("Say: … Then, in character, …"). gpt-live-1 receives lines to say, so those cards get spoken
+# wording here. Every other card is spoken from its `primary` text (the session's chosen variant or the candidate's
+# personalised wording, alt/pipeline/screen.session_stages). What is asked never changes:
+# same cards, same order, same fields.
+#
+# channel: commentary  → session.commentary.append (the model may paraphrase lightly)
+#          exact       → session.instructions.append "say exactly" (disclosures, role-play switches, closing)
+# `{role.*}`, `{persona.*}`, `{objection.*}`, `{candidate.*}` are filled from the session.
+
+cards:
+  consent_ack:
+    channel: exact
+    say: >-
+      Hi {candidate.first_name}, I'm {persona.name}, an AI interviewer working with Cygnify on the {role.title}
+      role at {role.company}. This is a structured screen of about fifteen minutes. It's recorded, and a human
+      recruiter reviews everything before any decision. Is that okay with you, and do you have about fifteen
+      minutes now?
+  rp_objection:
+    channel: exact
+    say: >-
+      For the next minute I'll play {objection.role_played}, and you're the account executive. Answer as
+      you would on a real call. … {objection.concern}
+    instructions: >-
+      Role-play is now active. You are playing {objection.role_played}, a customer. The candidate is the account
+      executive. Stay in character as the customer. Between the planner's lines, react in at most a few words
+      ("I see.", "Go on."); do not raise new concerns or ask new questions yourself, never answer the objection
+      yourself, and never coach the candidate.
+    probes:
+      roleplay_response:
+        channel: commentary
+        say: "Still in character as the customer, push back once: {objection.probe_if_weak}"
+  rp_exit:
+    channel: exact
+    say: >-
+      Thanks, let's step out of the role-play. If a customer asked you a technical detail you didn't know, what
+      would you do?
+    instructions: >-
+      The role-play has ended. You are the interviewer again, not the customer.
+
+closing:
+  completed: >-
+    Thank you for your time, {candidate.first_name}. A recruiter will review this screen and get back to you
+    within two business days. Goodbye.
+  consent_refused: That's absolutely fine. Thank you for your time, and goodbye.
+  abusive: I'm going to end the call here. Thank you for your time. Goodbye.
+  non_cooperative: >-
+    Since we can't continue with the interview, I'm going to end the call here. Thank you for your time. Goodbye.
+  end_request: >-
+    Of course. Thank you for your time, {candidate.first_name}. A recruiter will be in touch. Goodbye.
+  time_limit: >-
+    We're at time, so let's wrap up. Thank you, {candidate.first_name}. A recruiter will review this screen and
+    get back to you within two business days. Goodbye.
+
+transitions:
+  move_on: That's fine, let's move on.   # said before the next question when an answer could not be obtained
+
+redirect:                    # the first off-topic turn is handled by gpt-live-1 itself; the brain only counts it
+  warning: >-
+    This is a structured interview, and if we can't continue with it I'll need to end the call.

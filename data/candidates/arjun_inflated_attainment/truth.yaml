@@ -1,0 +1,123 @@
+# Synthetic ground truth. Not a real person. Northline Observability and Brightlane Software are fictional.
+# Personal numbers are this profile's claims, not facts about any real employer.
+candidate_id: arjun_inflated_attainment
+name: Arjun Mehta
+location: Gurugram
+product: cloud observability platform (logs, metrics, traces)
+employers:
+  current: {company: Northline Observability, title: Account Executive, start: 2023-06}
+  previous: {company: Brightlane Software, title: Sales Development Representative, start: 2020-08, end: 2023-05}
+
+# FX below is a labelled assumption for the reader only. Spoken answers stay in INR.
+fx_assumption: "1 USD = 84 INR, for band checks only"
+
+quota:
+  window: FY2025-26          # 1 Apr 2025 – 31 Mar 2026
+  window_dates: [2025-04-01, 2026-03-31]
+  owner: individual
+  unit: ARR
+  amount_inr: 40000000       # ₹4 crore
+  amount_usd_at_fx: 476190
+  period_months: 12
+  ramped: false
+  prior_year:
+    window: FY2024-25
+    unit: ARR
+    owner: individual
+    amount_inr: 20000000     # ₹2 crore
+    attainment_pct: 95       # ₹1.9 crore ARR. Not printed on the CV.
+
+attainment:
+  cv_claim_pct: 150
+  true_arr_attainment_pct: 50
+  mechanism: >
+    Multi-year TCV was divided by the ARR quota and printed as attainment.
+    The CV also prints average annual contract value, which is the ARR figure.
+    Those two CV bullets do not reconcile. The clarify answer resolves them.
+  cv_implied_closed_inr: 60000000          # 150% × ₹4 crore
+  spoken_arr_closed_inr: 20000000          # 10 × ₹20 lakh
+  tcv_closed_inr: 60000000                 # 10 × ₹60 lakh
+  deals_closed: 10
+  contract_years: 3
+  avg_arr_inr: 2000000                     # ₹20 lakh
+  avg_tcv_inr: 6000000                     # ₹60 lakh
+  check: >
+    10 × ₹60 lakh TCV = ₹6 crore = 150% × ₹4 crore ARR quota.
+    10 × ₹20 lakh ARR = ₹2 crore = 50% of the ARR quota.
+    ₹60 lakh / 3 = ₹20 lakh. The gap is fully explained. Nothing is left over.
+  dashboard_note: >
+    Fictional employer dashboard credited total contract value. He copied that
+    percent onto the CV. He understands the difference once asked. He does not
+    volunteer it before the clarify card.
+
+motion:
+  new_logo_share_pct: 60       # 6 of 10 deals were new paying accounts
+  self_sourced_pct: 40         # meetings he booked himself, not SDR or marketing
+  segment: commercial
+  employee_band: "200-1500"
+  typical_cycle_days: [80, 110]
+  territory: "North and West India, based in Gurugram"
+  selling_languages: [English, Hindi]
+
+representative_deal:
+  kind: new_paying_account
+  customer: "Noida logistics-tech company, about 300 employees. Fictional. Not a named real customer."
+  first_meeting_source: sdr
+  champion: Head of Engineering
+  economic_buyer: VP Engineering
+  eb_note: "At ₹20 lakh ARR one person could say no. No separate CFO."
+  stakeholders: [senior backend engineer, Head of Engineering, VP Engineering, security lead]
+  main_blocker: "Security did not want logs processed outside India."
+  own_actions: "Set the agenda and put the SE on a call with the security lead. Did not write the control list."
+  team_on_deal: [SDR who booked the first meeting, solutions engineer on the security call, the candidate on the weekly plan]
+  what_required_him: "Someone still had to drive the date. The technical answers were the SE's."
+  deal_arr_inr: 2000000
+  deal_tcv_inr: 6000000
+  cycle_days: 100
+  customer_outcome: "They said on-call felt lighter. They never gave a number."
+
+loss:
+  customer: "A retail group in Delhi. Fictional."
+  type: competitor_on_price
+  what_he_says_first: "Lost on price to another observability tool."
+  owned_point: "Stayed with one engineering manager and brought procurement in only after legal was already slow. Would book security and procurement in the first two weeks."
+  quality: "One controllable point, after a blame lead. Not a full no-decision post-mortem."
+
+roleplay:
+  quality: mediocre
+  says: "Invents a Mumbai guarantee ('data never leaves India'), claims no lock-in, offers a deck rather than a contractual answer, asks no question."
+  exit: "Would say he does not know and bring a solutions architect the same day."
+  score_note: "The exit answer is better than the in-character answer. The competency follows the in-character over-promise."
+
+comp:
+  current_ctc_inr: 4200000
+  fixed_pct: 70
+  variable_pct_of_ctc: 30
+  variable_note: "Last year's variable did not pay in full. Amount not stated."
+  ote_expectation_inr: 7000000
+  ote_band_used_for_fit: "Draft brief only, ₹60–90 lakh OTE. Not a MongoDB-published band. Not to be spoken."
+  notice_days: 60
+  notice_status: not_resigned
+  buyout: unknown
+  location_hybrid: "Lives in Gurugram. Will do hybrid from Gurugram."
+
+motivation: "Wants a larger known product and a new-logo number. Compensation has to move. Not a family or health reason."
+
+expected:
+  competencies:
+    deal_execution: 3          # names the VP Eng, the blocker, and a personal action; SE did the technical work; no customer number
+    performance_credibility: 2 # leads with 150%; repair is exact but the CV claim was a different metric
+    technical_credibility: 2   # over-promises residency and lock-in; exit answer would have been a 3 on its own
+    outcome_orientation: 2     # feature and a feeling, no customer number
+    ownership_learning: 3      # owns the late procurement move after blaming price
+  fit:
+    motion: pass                 # 60% new paying accounts, floor 50%
+    segment_and_cycle: pass      # commercial, about 100 days, ARR about USD 24k
+    territory_and_languages: pass
+    ote_expectation: pass        # ₹70 lakh OTE vs draft ₹60–90 lakh
+    notice_period: pass          # 60 days, not started
+    work_authorisation: pass     # India screen uses location_hybrid; Gurugram hybrid yes
+  recommendation: not_recommended
+  flags: [inflated_attainment, tcv_booked_against_arr_quota]
+  unweighted_sum_out_of_25: 12
+  recommendation_basis: "Competencies sum to 12/25. The fit checks pass. The attainment flag is the reason a recruiter does not advance him on this screen alone."

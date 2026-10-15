@@ -1,0 +1,47 @@
+# Market preset used when a role.md names a market that has no preset yet. It assumes nothing local:
+# it asks for the currency and the window instead of presuming them. Add a real preset per country when a role
+# there goes live (currency units, financial year, compensation terms, work-eligibility policy, notice norms).
+market_id: generic
+name: Generic (no local preset)
+currency: USD
+currency_words: US dollars
+units: "amounts as the candidate says them; always record the currency"
+financial_year: "unknown; always ask which window"
+default_max_notice_days: 90
+notice_norms: "varies by country; record days and whether notice has started"
+
+scale_words: []
+amount_style: western
+
+wording:
+  quota_amount_probe: Which currency was that quota in?
+  quota_window_probe: "Which window is that: a financial year, a calendar year, or the last four quarters?"
+  fit_comp:
+    variants:
+      - What is your current base pay, and what variable or commission do you earn at target, with the currency?
+      - How is your current pay structured, base versus variable at target, and in which currency?
+    short: "What's your current base and variable, and what OTE are you looking for?"
+    probes:
+      comp_split: And what is the variable or commission at target, on top of the base?
+      ote_expectation: "And what on-target earnings, base plus variable at plan, are you looking for?"
+
+# Eligibility only: never nationality, citizenship or residency status.
+work_eligibility:
+  ask: true
+  variants:
+    - Would you need a work permit or visa for this role's location, or are you already able to work there?
+    - What, if anything, would you need in terms of a work permit to take this role in its location?
+  short: "Would you need a work permit for this role's location?"
+
+field_hints:
+  quota: "quota amount with unit and currency as said"
+  current_comp: "current annual base pay with currency"
+  comp_split: "variable or commission at target, as an amount or a share of base"
+
+brain_notes:
+  performance_verification: >-
+    No local conventions are configured for this market: record amounts with the currency and the window exactly as
+    said, and never convert.
+  fit_and_logistics: >-
+    Ask work eligibility only as "able to work there or need a permit"; never ask nationality, citizenship or
+    residency status.
